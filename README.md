@@ -1,2 +1,2 @@
-# solus
-Solus é uma aplicação web desenvolvida como tcc para o curso de Análise e desenvolvimento de sistemas no IFSP câmpus Boituva.  O projeto tem como objetivo realizar a análise estatística dos dados meteorológicos, captados por sensores ligados a um microcontrolador arduino que através de uma API, envia os dados para uma aplicação web, onde será feita a análise dos dados capturados, os mesmos serão disponibilizados em uma aplicação web com interface.
+# Solus
+Solus é uma aplicação web desenvolvida como tcc para o curso de Análise e desenvolvimento de sistemas no IFSP câmpus Boituva.  O projeto tem como objetivo realizar a análise estatística dos dados meteorológicos, captados por sensores ligados a um microcontrolador arduino que através de uma API, envia os dados para uma aplicação web, onde será feita a análise dos dados capturados, os mesmos serão disponibilizados em uma interface.

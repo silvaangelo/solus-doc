@@ -1,3 +1,4 @@
+# Doc files (logs latex, etc)
 documentation/*.aux
 documentation/*.idx
 documentation/*.lof

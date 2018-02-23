@@ -1,0 +1,9 @@
+Sensor de umidade
+Sensor de temperatura
+Piranometro (termopilha) (raio solar)
+Pluviometro (medidor chuva mm)
+Sensor anemometro (vento)
+placa ethernet shield wifi
+Arduino
+
+DHT22 ou DH22 - sensor de umidade e temperatura

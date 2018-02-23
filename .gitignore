@@ -1,0 +1,6 @@
+documentation/*.aux
+documentation/*.idx
+documentation/*.lof
+documentation/*.log
+documentation/*.lot
+documentation/*.toc

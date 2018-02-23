@@ -1,0 +1,27 @@
+Fluxo
+
+Placa arduino coleta através de sensores as informações de:
+
+- Umidade
+- Temperatura
+- Velocidade do vento (Anemômetro)
+- Quantidade de chuva (Pluviômetro)
+- Radiação solar (Piranometro)
+
+Informações são separadas e enviadas através de requisição HTTP utilizandou um ethernet shield wifi para a API.
+
+Aplicação recebe os dados e faz as métricas dos dados recebidos, armazenando corretamente em banco de dados, contendo:
+
+- Métricas e informações capturadas pelos sensores
+- Local onde as informações foram capturadas
+- Horário
+
+v2
+
+Usuário acessa os dados através da aplicação web, consultando a API.
+
+v3
+
+Controlar arduino pela API (webapp)
+
+Fazer cache no arduino em caso de perca de conexão com o servidor.

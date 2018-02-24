@@ -46,9 +46,12 @@ zathura solus-doc.pdf
 
 É a branch responsável por armazenar e gerenciar a implementação da api que recebe os dados dos sensores e do webapp.
 
+# Arduino
+
+É a branch responsável por armazenar e gerenciar a implementação do arduino, que irá ficar responsável por coletar os dados através de sensores e consumir utilizando requisição HTTP a api.
+
 # Agradecimentos
 
 Equipe **abnteX** pela suíte incrível para trabalhar com latex em **ABNT**:
 
 [![Logo abnTeX](https://raw.githubusercontent.com/abntex/abntex2-old-binary/master/marca-abntex/marca_abntex-2.png "Logo abnTeX")](http://www.abntex.net.br/)
-

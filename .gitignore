@@ -5,3 +5,4 @@ documentation/*.lof
 documentation/*.log
 documentation/*.lot
 documentation/*.toc
+documentation/*.pdf

@@ -181,66 +181,65 @@
 %     \includepdf{fig_ficha_catalografica.pdf}
 % \end{fichacatalografica}
 
-%\begin{fichacatalografica}
-	%\sffamily
-	%\vspace*{\fill}					% Posição vertical
-	%\begin{center}					% Minipage Centralizado
-	%\fbox{\begin{minipage}[c][8cm]{13.5cm}		% Largura
-	%\small
-	%\imprimirautor
-	%%Sobrenome, Nome do autor
-%
-	%\hspace{0.5cm} \imprimirtitulo  / \imprimirautor. --
-	%\imprimirlocal, \imprimirdata-
-%
-	%\hspace{0.5cm} \pageref{LastPage} p. : il. (algumas color.) ; 30 cm.\\
-%
-	%\hspace{0.5cm} \imprimirorientadorRotulo~\imprimirorientador\\
-%
-	%\hspace{0.5cm}
-	%\parbox[t]{\textwidth}{\imprimirtipotrabalho~--~\imprimirinstituicao,
-	%\imprimirdata.}\\
-%
-	%\hspace{0.5cm}
-		%1. Palavra-chave1.
-		%2. Palavra-chave2.
-		%2. Palavra-chave3.
-		%I. Orientador.
-		%II. Universidade xxx.
-		%III. Faculdade de xxx.
-		%IV. Título
-	%\end{minipage}}
-	%\end{center}
-%\end{fichacatalografica}
+\begin{fichacatalografica}
+	\sffamily
+	\vspace*{\fill}					% Posição vertical
+	\begin{center}					% Minipage Centralizado
+	\fbox{\begin{minipage}[c][8cm]{13.5cm}		% Largura
+	\small
+	\imprimirautor
+	%Sobrenome, Nome do autor
+
+	\hspace{0.5cm} \imprimirtitulo  / \imprimirautor. --
+	\imprimirlocal, \imprimirdata-
+
+	\hspace{0.5cm} \pageref{LastPage} p. : il. (algumas color.) ; 30 cm.\\
+
+	\hspace{0.5cm} \imprimirorientadorRotulo~\imprimirorientador\\
+
+	\hspace{0.5cm}
+	\parbox[t]{\textwidth}{\imprimirtipotrabalho~--~\imprimirinstituicao,
+	\imprimirdata.}\\
+
+	\hspace{0.5cm}
+		1. Palavra-chave1.
+		2. Palavra-chave2.
+		2. Palavra-chave3.
+		I. Orientador.
+		II. Universidade xxx.
+		III. Faculdade de xxx.
+		IV. Título
+	\end{minipage}}
+	\end{center}
+\end{fichacatalografica}
 % ---
 
 % ---
 % Inserir errata
 % ---
-%\begin{errata}
-%Elemento opcional da \citeonline[4.2.1.2]{NBR14724:2011}. Exemplo:
-%
-%\vspace{\onelineskip}
-%
-%FERRIGNO, C. R. A. \textbf{Tratamento de neoplasias ósseas apendiculares com
-%reimplantação de enxerto ósseo autólogo autoclavado associado ao plasma
-%rico em plaquetas}: estudo crítico na cirurgia de preservação de membro em
-%cães. 2011. 128 f. Tese (Livre-Docência) - Faculdade de Medicina Veterinária e
-%Zootecnia, Universidade de São Paulo, São Paulo, 2011.
-%
-%\begin{table}[htb]
-%\center
-%\footnotesize
-%\begin{tabular}{|p{1.4cm}|p{1cm}|p{3cm}|p{3cm}|}
-  %\hline
-   %\textbf{Folha} & \textbf{Linha}  & \textbf{Onde se lê}  & \textbf{Leia-se}  \\
-    %\hline
-    %1 & 10 & auto-conclavo & autoconclavo\\
-   %\hline
-%\end{tabular}
-%\end{table}
-%
-%\end{errata}
+\begin{errata}
+
+\vspace{\onelineskip}
+
+FERRIGNO, C. R. A. \textbf{Tratamento de neoplasias ósseas apendiculares com
+reimplantação de enxerto ósseo autólogo autoclavado associado ao plasma
+rico em plaquetas}: estudo crítico na cirurgia de preservação de membro em
+cães. 2011. 128 f. Tese (Livre-Docência) - Faculdade de Medicina Veterinária e
+Zootecnia, Universidade de São Paulo, São Paulo, 2011.
+
+\begin{table}[htb]
+\center
+\footnotesize
+\begin{tabular}{|p{1.4cm}|p{1cm}|p{3cm}|p{3cm}|}
+  \hline
+   \textbf{Folha} & \textbf{Linha}  & \textbf{Onde se lê}  & \textbf{Leia-se}  \\
+    \hline
+    1 & 10 & auto-conclavo & autoconclavo\\
+   \hline
+\end{tabular}
+\end{table}
+
+\end{errata}
 % ---
 
 % ---
@@ -401,11 +400,40 @@ Agradecimentos
 % ----------------------------------------------------------
 % Introdução (exemplo de capítulo sem numeração, mas presente no Sumário)
 % ----------------------------------------------------------
-\chapter*[Introdução]{Introdução}
+\chapter{Introdução}
 \addcontentsline{toc}{chapter}{Introdução}
 % ----------------------------------------------------------
 
 Introdução
+
+\section{Tema}
+
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\section{Objetivo do Projeto}
+
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\section{Delimitação do Problema}
+
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\section{Justificativa da Escolha do Tema}
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\section{Método de Trabalho}
+
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\section{Organização do Trabalho}
+
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 % ----------------------------------------------------------
 % Finaliza a parte no bookmark do PDF
@@ -476,30 +504,25 @@ Conclusão
 % ---
 % Inicia os anexos
 % ---
-%\begin{anexosenv}
-%
-%% Imprime uma página indicando o início dos anexos
-%\partanexos
-%
-%% ---
-%\chapter{Morbi ultrices rutrum lorem.}
-%% ---
-%\lipsum[30]
-%
-%% ---
-%\chapter{Cras non urna sed feugiat cum sociis natoque penatibus et magnis dis
-%parturient montes nascetur ridiculus mus}
-%% ---
-%
-%\lipsum[31]
-%
-%% ---
-%\chapter{Fusce facilisis lacinia dui}
-%% ---
-%
-%\lipsum[32]
-%
-%\end{anexosenv}
+\begin{anexosenv}
+
+% Imprime uma página indicando o início dos anexos
+\partanexos
+
+% ---
+\chapter{Morbi ultrices rutrum lorem.}
+% ---
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+% ---
+\chapter{Cras non urna sed feugiat cum sociis natoque penatibus et magnis dis
+parturient montes nascetur ridiculus mus}
+% ---
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\end{anexosenv}
 
 %---------------------------------------------------------------------
 % INDICE REMISSIVO

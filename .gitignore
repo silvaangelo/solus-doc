@@ -1,8 +1,19 @@
 # Doc files (logs latex, etc)
+documentation/*.auxd
+documentation/*.idxd
+documentation/*.lofd
+documentation/*.logd
+documentation/*.lotd
+documentation/*.toc
 documentation/*.aux
+documentation/*.bbl
+documentation/*.blg
+documentation/*.brf
+documentation/*.fls
+documentation/*.fdb_latexmk
 documentation/*.idx
+documentation/*.ilg
+documentation/*.ind
 documentation/*.lof
 documentation/*.log
 documentation/*.lot
-documentation/*.toc
-documentation/*.pdf

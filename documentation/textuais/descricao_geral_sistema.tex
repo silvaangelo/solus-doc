@@ -1,8 +1,6 @@
 \chapter{Descrição Geral do Sistema}
 \addcontentsline{toc}{chapter}{Descrição Geral do Sistema}
 
-% Este capítulo tem como objetivo descrever de forma geral o sistema, o escopo e as principais funções. A descrição geral do sistema deve abrange os itens a seguir.
-
 O projeto visa, através da análise estatística de dados meteorológicos, auxiliar o estudo de viabilidade acerca da instalação de painéis fotovoltaicos.
 
 Para isso, serão coletados dados através de sensores conectados a um microcontrolador arduino. Inicialmente, prevemos captar informações de umidade do ar, temperatura e incidência de radiação solar.
@@ -23,16 +21,25 @@ O sistema afeta principalmente, a configuração dos painéis como ângulo, posi
 
 \subsection{Usuários do Sistema}
 
-Neste item deve ser descrito para qual tipo de empresa se destina o sistema, os tipos de usuários que utilizarão o sistema.
+O sistema visa atender especialistas que precisam realizar tomadas de decisão.
 
-Estas informações são importantes para a definição de usabilidade G do sistema.
+Clientes que, antes de realizar a instalação de painéis solares, precisam analisar se o investimento realizado será compensado. E também, empresas de instalação de painéis solares, que gostariam de fazer uma análise de viabilidade mudando local, angulo e fazendo outras pesquisas acerca da instalação ou da manutenção de painéis fotovoltaicos.
 
 \subsection{Desenvolvedores do Sistema}
 
-Neste item deve ser descrito os tipos de pessoas envolvidas em todo o desenvolvimento do sistema direta ou indiretamente.
+Os envolvidos no desenvolvimento do projeto, são o orientador, Dr. Marcelo Polido, que ficará responsável pelos requisitos do sistema, ele irá coordenar o que será implementado e irá ditar as entregas incrementais. Também responsável por requisitos do projeto está o Professor Mario Pin, que será o Product Owner, ele será o primeiro cliente final da aplicação, irá utilizar o sistema para realizar análise de dados.
 
-Estas informações são importantes para a distribuição de responsabilidades e pontos-focais de desenvolvimento.
+O planejamento e desenvolvimento do projeto, ficará por conta do aluno responsável pela defesa do mesmo, Angelo Silva.
 
-\subsection{Regras de Negócio}
+O projeto é open source, ou seja, aberto para a comunidade no github, recebendo então, pequenas constribuições esporádicas de outros desenvolvedores ao longo do cliclo de vida do projeto.
 
-Neste item devem ser descritas as regras de negócio relevantes para o sistema, como por exemplo, restrições de negócio, restrições de desempenho, tolerância à falhas, volume de informação a ser armazenada, estimativa de crescimento de volume, ferramentas de apoio, etc.
+\subsection{Tecnologias Empregadas}
+
+O projeto foi desenvolvido utilizando arduino para gerenciamento e captura dos dados utilizando requisições Http através das libraries do arduino. A conexão com a internet foi feita utilizando um arduino ethernet shield wifi, as informações são capturadas, é feita uma validação e formatação básica dos dados e então os mesmos são enviados para uma RESTFUL API construída com PHP.
+
+A API do projeto foi desenvolvida utilizando microframework Lumen, utilizando banco de dados MYSQL e Percona server como SGBD, através de uma interface construída com framework front end bootstrap, javascript ES6 e sass, a interface foi feita utilizando conceitos de usabilidade e utilizando mobile first.
+
+\section{Regras de Negócio}
+
+%% Neste item devem ser descritas as regras de negócio relevantes para o sistema, como por exemplo, restrições de negócio, restrições de desempenho, tolerância à falhas, volume de informação a ser armazenada, estimativa de crescimento de volume, ferramentas de apoio, etc.
+A definir

@@ -1,4 +1,4 @@
-# Doc files (logs latex, etc)
+# Documentation ignores (logs latex, etc)
 documentation/*.auxd
 documentation/*.idxd
 documentation/*.lofd
@@ -17,3 +17,24 @@ documentation/*.ind
 documentation/*.lof
 documentation/*.log
 documentation/*.lot
+
+# Presentation ignores (logs latex, etc)
+
+presentation/*.auxd
+presentation/*.idxd
+presentation/*.lofd
+presentation/*.logd
+presentation/*.lotd
+presentation/*.toc
+presentation/*.aux
+presentation/*.bbl
+presentation/*.blg
+presentation/*.brf
+presentation/*.fls
+presentation/*.fdb_latexmk
+presentation/*.idx
+presentation/*.ilg
+presentation/*.ind
+presentation/*.lof
+presentation/*.log
+presentation/*.lot

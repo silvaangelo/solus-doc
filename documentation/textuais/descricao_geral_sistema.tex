@@ -35,11 +35,11 @@ O projeto é open source, ou seja, aberto para a comunidade no github, recebendo
 
 \subsection{Tecnologias Empregadas}
 
-A aplicação foi desenvolvida utilizando arduino para gerenciamento e captura dos dados utilizando requisições Http através das libraries do arduino. A conexão com a internet foi feita utilizando um arduino ethernet shield wifi, as informações são capturadas, é feita uma validação e formatação básica dos dados e então os mesmos são enviados para uma RESTFUL API construída com PHP.
+A aplicação foi desenvolvida utilizando arduino para gerenciamento e captura dos dados utilizando requisições HTTP através das libraries do arduino. A conexão com a internet foi feita utilizando um arduino ethernet shield wifi, as informações são capturadas, é feita uma validação e formatação básica dos dados e então os mesmos são enviados para uma RESTFUL API construída com PHP.
 
 A API do projeto foi desenvolvida utilizando microframework Lumen, utilizando banco de dados MYSQL e Percona server como SGBD, através de uma interface construída com framework front end bootstrap, javascript ES6 e sass, a interface foi construída seguindo conceitos de usabilidade.
 
 \section{Regras de Negócio}
 
-A maior parte das regras de negócio de sistema fica centralizada nos filtros, eles são quem valida os dados do sistema, definindo regras para a captura de dados
+A maior parte das regras de negócio de sistema fica centralizada nos filtros, eles são quem valida os dados do sistema, definindo regras para a captura de dados.
 A regra de negócio de filtragem diz que os dados de umidade e temperatura não podem se diferenciar por 50\% ou mais da média dos dados captados na ultima hora.

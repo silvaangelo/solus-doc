@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.2.23)  23 MAR 2018 22:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.2.23)  24 MAR 2018 23:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**slide-apresentacao-270318-primeira-entrega.tex
-(./slide-apresentacao-270318-primeira-entrega.tex
+**index.tex
+(./index.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 6 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamer.cls
@@ -1164,9 +1164,8 @@ LaTeX Font Info:    Overwriting symbol font `largesymbolsA' in version `bold'
 LaTeX Info: Redefining \not on input line 1043.
 LaTeX Info: Redefining \textsquare on input line 1063.
 LaTeX Info: Redefining \openbox on input line 1064.
-)
-(./slide-apresentacao-270318-primeira-entrega.aux)
-\openout1 = `slide-apresentacao-270318-primeira-entrega.aux'.
+) (./index.aux)
+\openout1 = `index.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 44.
 LaTeX Font Info:    Try loading font information for OML+txmi on input line 44.
@@ -1291,10 +1290,9 @@ LaTeX Info: Redefining \ref on input line 44.
 LaTeX Info: Redefining \pageref on input line 44.
 LaTeX Info: Redefining \nameref on input line 44.
 
-(./slide-apresentacao-270318-primeira-entrega.out)
-(./slide-apresentacao-270318-primeira-entrega.out)
+(./index.out) (./index.out)
 \@outlinefile=\write5
-\openout5 = `slide-apresentacao-270318-primeira-entrega.out'.
+\openout5 = `index.out'.
 
 \symnumbers=\mathgroup10
 \sympureletters=\mathgroup11
@@ -1360,100 +1358,65 @@ orem-dictionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
 LaTeX Info: Redefining \includegraphics on input line 44.
-
-(./slide-apresentacao-270318-primeira-entrega.nav)
+ (./index.nav)
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
 (Font)              scaled to size 5.69998pt on input line 44.
+LaTeX Font Info:    Font shape `T1/txss/m/n' will be
+(Font)              scaled to size 13.67995pt on input line 46.
+LaTeX Font Info:    Font shape `T1/txss/m/n' will be
+(Font)              scaled to size 7.59998pt on input line 46.
+LaTeX Font Info:    Font shape `T1/txss/m/n' will be
+(Font)              scaled to size 3.79999pt on input line 46.
 
-(./slide-apresentacao-270318-primeira-entrega.toc
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./index.toc
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
 (Font)              scaled to size 9.49997pt on input line 3.
-)
-LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 13.67995pt on input line 49.
-LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 3.79999pt on input line 49.
- [1
+) [2
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OT1+txr on input line 63.
-
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
-File: ot1txr.fd 2000/12/15 v3.1
-)
-LaTeX Font Info:    Try loading font information for U+txsya on input line 63.
-
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsya.fd
-File: utxsya.fd 2000/12/15 v3.1
-)
-LaTeX Font Info:    Try loading font information for U+txsyb on input line 63.
-
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyb.fd
-File: utxsyb.fd 2000/12/15 v3.1
-)
-LaTeX Font Info:    Try loading font information for U+txmia on input line 63.
-
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxmia.fd
-File: utxmia.fd 2000/12/15 v3.1
-)
-LaTeX Font Info:    Try loading font information for U+txsyc on input line 63.
-
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
-File: utxsyc.fd 2000/12/15 v3.1
-)
-LaTeX Font Info:    Try loading font information for T1+txr on input line 63.
-
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/t1txr.fd
-File: t1txr.fd 2000/12/15 v3.1
-)
+]
 LaTeX Font Info:    Font shape `T1/txss/bx/n' will be
 (Font)              scaled to size 10.40245pt on input line 63.
 
+[3
 
-LaTeX Warning: Citation `abntex2modelo' on page 2 undefined on input line 63.
-
-[2
+] [4
 
 ]
 \tf@nav=\write6
-\openout6 = `slide-apresentacao-270318-primeira-entrega.nav'.
+\openout6 = `index.nav'.
 
 \tf@toc=\write7
-\openout7 = `slide-apresentacao-270318-primeira-entrega.toc'.
+\openout7 = `index.toc'.
 
 \tf@snm=\write8
-\openout8 = `slide-apresentacao-270318-primeira-entrega.snm'.
+\openout8 = `index.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 76.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 76.
- (./slide-apresentacao-270318-primeira-entrega.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 76.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 76.
-Package rerunfilecheck Info: File `slide-apresentacao-270318-primeira-entrega.o
-ut' has not changed.
-(rerunfilecheck)             Checksum: 5E19A2C867A6BE84360D54E0479D51BD;51.
-
-
-LaTeX Warning: There were undefined references.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 76.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 91.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 91.
+ (./index.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 91.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 91.
+Package rerunfilecheck Info: File `index.out' has not changed.
+(rerunfilecheck)             Checksum: 0F865F072EC6B0468154E31308644519;102.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 91.
  ) 
 Here is how much of TeX's memory you used:
- 18282 strings out of 494906
- 336742 string characters out of 6179094
- 409521 words of memory out of 5000000
- 21104 multiletter control sequences out of 15000+600000
- 40914 words of font info for 67 fonts, out of 8000000 for 9000
+ 18195 strings out of 494906
+ 335001 string characters out of 6179094
+ 407930 words of memory out of 5000000
+ 21041 multiletter control sequences out of 15000+600000
+ 24004 words of font info for 34 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
- 48i,14n,51p,422b,614s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,14n,51p,385b,614s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on slide-apresentacao-270318-primeira-entrega.pdf (2 pages, 1698
-9 bytes).
+Output written on index.pdf (4 pages, 26122 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
- 72 compressed objects within 1 object stream
- 6 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 141 PDF objects out of 1000 (max. 8388607)
+ 125 compressed objects within 2 object streams
+ 11 named destinations out of 1000 (max. 500000)
+ 59 words of extra memory for PDF output out of 10000 (max. 10000000)
 

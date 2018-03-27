@@ -87,6 +87,14 @@ Para isso, serão coletados dados através de sensores conectados a um microcont
 \end{figure}
 \end{frame}
 
+\begin{frame}{Requisitos não funcionais}
+\begin{itemize}
+\item Segurança
+\item Disponibilidade
+\item Performance \ldots
+\end{itemize}
+\end{frame}
+
 \begin{frame}{Tecnologias empregadas}
 \section{Tecnologias empregadas}
 
@@ -103,6 +111,18 @@ Para isso, serão coletados dados através de sensores conectados a um microcont
 \begin{frame}{Regras de negócio}
 A maior parte das regras de negócio de sistema fica centralizada nos filtros, eles são quem validam os dados do sistema, definindo regras para a captura de dados.
 A regra de negócio de filtragem diz que os dados de umidade e temperatura não podem se diferenciar por 50\% ou mais da média dos dados captados na ultima hora.
+\end{frame}
+
+\begin{frame}[fragile=singleslide]
+\section{Exemplo de filtros}
+
+\begin{verbatim}
+$data->addFilter(function($data) use ($highLimit) {
+    return $data < $highLimit * 1.30;
+})->addFilter(function($data) use ($lowLimit) {
+    return $data > $lowLimit * 1.30;
+});
+\end{verbatim}
 \end{frame}
 
 % --- O comando \allowframebreaks ---

@@ -1,8 +1,8 @@
 % Apresentações em widescreen. Outros valores possíveis: 1610, 149, 54, 43 e 32.
 % Por padrão, as apresentações são no formato 4:3 (sem o aspectratio).
-\documentclass[aspectratio=169]{beamer}
+\documentclass[aspectratio=43]{beamer}
 
-\usetheme{Pittsburgh}
+\usetheme{Antibes}
 \usecolortheme{default}
 \usefonttheme[onlymath]{serif}			% para fontes matemáticas
 % Enconte mais temas e cores em http://www.hartwork.org/beamer-theme-matrix/
@@ -14,7 +14,7 @@
 \setbeamercolor{author}{fg=black}
 \setbeamercolor{institute}{fg=blue}
 \setbeamercolor{date}{fg=black}
-\setbeamercolor{frametitle}{fg=red}
+\setbeamercolor{frametitle}{fg=white}
 \setbeamercolor{framesubtitle}{fg=brown}
 \setbeamercolor{block title}{bg=blue, fg=white}		%Cor do título
 \setbeamercolor{block body}{bg=gray, fg=darkgray}	%Cor do texto (bg= fundo; fg=texto)
@@ -59,22 +59,50 @@ A documentação do projeto foi construída utilizando lateX e o framework abnte
 \vspace{0.1in}
 
 O projeto pode ser encontrado em: \textbf{github.com/r6d6/solus}
-
 \end{frame}
 
 \begin{frame}{Introdução}
 \section{Introdução}
 
 Na sociedade contemporânea, diversas preocupações quanto a captação de energia surgiram. Uma dessas preocupações é cada vez mais, buscar fontes renováveis de energia.
+\end{frame}
 
-\vspace{0.1in}
+\begin{frame}{Descrição geral do sistema}
+\section{Descrição geral do sistema}
 
-Atualmente, a energia solar vem mostrando seus benefícios, sendo pelo custo, que é muito mais baixo do que pás eólicas e pela facilidade de instalação, que pode ser feita sem a necessidade de uma grande área reservada.
+O projeto visa, através da análise estatística de dados meteorológicos, auxiliar o estudo de viabilidade acerca da instalação de painéis fotovoltaicos.
 
-\vspace{0.1in}
+Para isso, serão coletados dados através de sensores conectados a um microcontrolador arduino. Inicialmente, prevemos captar informações de umidade do ar, temperatura e incidência de radiação solar.
+\end{frame}
 
-Devido ao avanço da captação de energia solar, diversos desafios surgiram ao se estudar a melhor forma de se trabalhar com a energia captada.
+\begin{frame}{Requisitos do sistema}
+\section{Requisitos do sistema}
 
+\begin{figure}[!htb]
+    \label{figure_diagrama_caso_uso}
+    \centering
+    \caption{Diagrama de caso de uso} \label{includegraphics_diagrama_caso_uso}
+    \includegraphics[scale=0.3]{caso_de_uso.png}
+    \hfill
+\end{figure}
+\end{frame}
+
+\begin{frame}{Tecnologias empregadas}
+\section{Tecnologias empregadas}
+
+\begin{itemize}
+\item Microcontrolador arduino e suas libraries para requisição HTTP
+\item GIT como sistema de versionamento para versionamento
+\item PHP para criação da API
+\item Lumen como framework para construção da API
+\item Percona Server como SGBD (MySQL)
+\item Docker para gerenciamento dos containers da aplicação \ldots
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Regras de negócio}
+A maior parte das regras de negócio de sistema fica centralizada nos filtros, eles são quem validam os dados do sistema, definindo regras para a captura de dados.
+A regra de negócio de filtragem diz que os dados de umidade e temperatura não podem se diferenciar por 50\% ou mais da média dos dados captados na ultima hora.
 \end{frame}
 
 % --- O comando \allowframebreaks ---

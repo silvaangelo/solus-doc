@@ -20,21 +20,22 @@ documentation/*.lot
 
 # Presentation ignores (logs latex, etc)
 
-presentation/*.auxd
-presentation/*.idxd
-presentation/*.lofd
-presentation/*.logd
-presentation/*.lotd
-presentation/*.toc
-presentation/*.aux
-presentation/*.bbl
-presentation/*.blg
-presentation/*.brf
-presentation/*.fls
-presentation/*.fdb_latexmk
-presentation/*.idx
-presentation/*.ilg
-presentation/*.ind
-presentation/*.lof
-presentation/*.log
-presentation/*.lot
+slides/**/*.auxd
+slides/**/*.idxd
+slides/**/*.lofd
+slides/**/*.logd
+slides/**/*.lotd
+slides/**/*.toc
+slides/**/*.aux
+slides/**/*.bbl
+slides/**/*.blg
+slides/**/*.brf
+slides/**/*.fls
+slides/**/*.fdb_latexmk
+slides/**/*.idx
+slides/**/*.ilg
+slides/**/*.ind
+slides/**/*.lof
+slides/**/*.log
+slides/**/*.lot
+slides/**/*.snm

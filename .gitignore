@@ -24,8 +24,10 @@ slides/**/*.auxd
 slides/**/*.idxd
 slides/**/*.lofd
 slides/**/*.logd
+slides/**/*.nav
 slides/**/*.lotd
 slides/**/*.toc
+slides/**/*.out
 slides/**/*.aux
 slides/**/*.bbl
 slides/**/*.blg
@@ -39,3 +41,5 @@ slides/**/*.lof
 slides/**/*.log
 slides/**/*.lot
 slides/**/*.snm
+slides/**/*.aux
+slides/**/*.auv

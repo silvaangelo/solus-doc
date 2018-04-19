@@ -8,6 +8,7 @@ documentation/*.toc
 documentation/*.aux
 documentation/*.bbl
 documentation/*.blg
+documentation/**/**/*.bak
 documentation/*.brf
 documentation/*.fls
 documentation/*.fdb_latexmk

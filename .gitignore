@@ -1,23 +1,23 @@
 # Documentation ignores (logs latex, etc)
-documentation/*.auxd
-documentation/*.idxd
-documentation/*.lofd
-documentation/*.logd
-documentation/*.lotd
-documentation/*.toc
-documentation/*.aux
-documentation/*.bbl
-documentation/*.blg
-documentation/**/**/*.bak
-documentation/*.brf
-documentation/*.fls
-documentation/*.fdb_latexmk
-documentation/*.idx
-documentation/*.ilg
-documentation/*.ind
-documentation/*.lof
-documentation/*.log
-documentation/*.lot
+src/*.auxd
+src/*.idxd
+src/*.lofd
+src/*.logd
+src/*.lotd
+src/*.toc
+src/*.aux
+src/*.bbl
+src/*.blg
+src/**/**/*.bak
+src/*.brf
+src/*.fls
+src/*.fdb_latexmk
+src/*.idx
+src/*.ilg
+src/*.ind
+src/*.lof
+src/*.log
+src/*.lot
 
 # Presentation ignores (logs latex, etc)
 

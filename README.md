@@ -3,9 +3,9 @@
 Solus é uma aplicação desenvolvida como trabalho de conclusão de curso para Análise e Desenvolvimento de Sistemas no IFSP Câmpus Boituva.
 O objetivo do projeto é realizar a análise estatística de dados meteorológicos, capturados através de sensores ligados a um microcontrolador arduino.
 
-# Documentação
+Este repositório contem a documentação do TCC, caso você queira visualizar a implantação do projeto acesse:
 
-A branch documentation irá conter a documentação sobre o projeto e as principais informações sobre o projeto como um todo.
+[https://github.com/r6d6/solus](https://github.com/r6d6/solus)
 
 ## Receita
 
@@ -47,14 +47,6 @@ zathura solus-doc.pdf
 Os diagramas do projeto estão na pasta /diagrams.
 Foi utilizado no desenvolvimento o astah.
 Ele pode ser obtido gratuitamente (aqui)[http://astah.net/editions/community]
-
-# Api
-
-É a branch responsável por armazenar e gerenciar a implementação da api que recebe os dados dos sensores e do webapp.
-
-# Arduino
-
-É a branch responsável por armazenar e gerenciar a implementação do arduino, que irá ficar responsável por coletar os dados através de sensores e consumir utilizando requisição HTTP a api.
 
 # Agradecimentos
 

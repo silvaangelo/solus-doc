@@ -1,0 +1,41 @@
+subtitle:
+
+table_name
+    column
+    column
+    column
+
+---
+
+schema:
+
+credential
+    id
+    username
+    password
+
+user
+    id
+    credential_id
+    name
+    email
+
+location
+    id
+    name - unique
+
+arduino
+    id
+    location_id (location - id)
+    credential_id
+
+measure_type
+    id
+    name
+
+measure
+    id
+    type_id (measure_type - id)
+    arduino_id (arduino - id)
+    date
+    value

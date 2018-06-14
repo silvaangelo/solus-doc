@@ -1,0 +1,37 @@
+\chapter{Descrição e documentação da API}
+\addcontentsline{toc}{chapter}{Descrição e documentação da API}
+
+Podemos conferir abaixo a documentação das rotas da API.
+
+\begin{table}[H]
+    \centering
+    \caption{Descrição das rotas da API}
+    \label{table_api_routes}
+    \begin{tabular}{|l|l|l|}
+    \hline
+    \textbf{Método} & \textbf{Rota}        & \textbf{Descrição}                           \\ \hline
+    GET             & /arduino             & Lista os arduinos                            \\ \hline
+    GET             & /arduino/:id         & Retorna os dados de um arduino               \\ \hline
+    POST            & /arduino             & Cadastra um novo arduino                     \\ \hline
+    POST, PATCH     & /arduino/:id         & Atualiza os dados de um arduino              \\ \hline
+    DELETE          & /arduino/:id         & Deleta um arduino e suas medidas capturadas  \\ \hline
+    GET             & /arduino:id/measure  & Retorna as medidas capturadas por um arduino \\ \hline
+    POST            & /arduino/:id/measure & Cadastra uma medida em um arduino            \\ \hline
+    GET             & /measure/:id         & Retorna os dados de uma medida               \\ \hline
+    POST            & /authenticate        & Retorna o Json Web Token de uma credencial   \\ \hline
+    POST            & /location            & Cria uma nova localização                    \\ \hline
+    GET             & /location/:id        & Retorna os dados de uma localização          \\ \hline
+    POST, PATCH     & /location/:id        & Atualiza os dados de uma localização         \\ \hline
+    DELETE          & /location/:id        & Deleta uma localização                       \\ \hline
+
+    \end{tabular}
+\end{table}
+
+\section{Métodos HTTP utilizados}
+
+Como podemos visualizar na tabela \ref{table_api_routes}, o método POST fica designado a criar um recurso quando a requisição for enviada para uma rota sem a identificação. O método POST também é utilizado para atualizar um recurso quando a requisição for enviada para um recurso identificado. Para a atualização de um recurso também pode ser utilizado o método PATCH.
+Para a consulta de recursos é utilizado o método GET, o método DELETE é utilizado para excluir um recurso.
+
+\section{Autenticação}
+
+Uma exceção do método POST é na autenticação, os campos nome de usuário e senha são enviados para a API, que retorna um Json Web Token para que possa ser feita a autenticação de forma moderna.

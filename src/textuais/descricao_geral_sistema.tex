@@ -1,7 +1,7 @@
 \chapter{Descrição Geral do Sistema}
 \addcontentsline{toc}{chapter}{Descrição Geral do Sistema}
 
-A arquitetura da aplicação desenvolvida pode ser resumida em dados sendo capturados através de sensores conectados a um microcontrolador arduino, serão captados dados de umidade do ar, temperatura e incidência de radiação solar.
+A arquitetura da aplicação desenvolvida pode ser resumida em dados sendo capturados através de sensores conectados a um microcontrolador arduino, serão captadas as seguintes informações: temperatura, umidade do ar, temperatura em relação a umidade, porcentagem de chuva, radiação uv, intensidade luminosa e capacidade solar.
 
 Dados esses, que serão enviados através de requisições HTTP para uma API, serão armazenadas em banco de dados e então, será feita uma análise estatística dessas informações.
 
@@ -25,11 +25,6 @@ O projeto é open source, ou seja, aberto para a comunidade no github, recebendo
 
 \subsection{Tecnologias Empregadas}
 
-A aplicação foi desenvolvida utilizando arduino para gerenciamento e captura dos dados utilizando requisições HTTP através das libraries do arduino. A conexão com a internet foi feita utilizando um arduino ethernet shield wifi, as informações são capturadas, é feita uma validação e formatação básica dos dados e então os mesmos são enviados para uma RESTFUL API construída com NODEJS.
+A aplicação foi desenvolvida utilizando arduino para gerenciamento e captura dos dados utilizando requisições HTTP através das bibliotecas do arduino. A conexão com a internet foi feita utilizando um nodeMCU Wifi, as informações são capturadas, é feita uma validação e formatação básica dos dados e então os mesmos são enviados para uma RESTFUL API construída com NODEJS.
 
-O banco de dados utilizado foi o MYSQL, sendo servido a engine XtraDB, servido pela aplicação percona server.
-
-\section{Regras de Negócio}
-
-A maior parte das regras de negócio de sistema fica centralizada nos filtros, eles são quem valida os dados do sistema, definindo regras para a captura de dados.
-A regra de negócio de filtragem diz que os dados de umidade e temperatura não podem se diferenciar por 50\% ou mais da média dos dados captados na ultima hora.
+O banco de dados utilizado foi o MongoDB, com um framework de mapeamento chamado Mongoose,

@@ -18,10 +18,6 @@ Conforme descrito na figura \ref{figure_diagrama_estado} os estados durante o ar
 A autenticação do arduino na API foi feita e a requisição HTTP para o armazenamento de uma medida foi feita até a API.
 Nesse estado, a requisição está passando por uma validação básica, verificando os tipos e formato dos dados.
 
-\section{Validando regras de negócio}
-
-A medida passou pelo controlador e está sendo validada através dos filtros, onde as regras de negócio de validação estão verificando se aquela medida faz sentido, baseando-se nas medidas captadas anteriormente.
-
 \section{Armazenando em banco de dados}
 
 A medida é valida e está sendo armazenada no banco de dados, após, ela é retornada a camada de serviço.

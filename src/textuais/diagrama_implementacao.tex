@@ -10,3 +10,13 @@ A seguir o diagrama de implementação do sistema, que descreve a forma como os 
     \includegraphics[scale=0.6]{diagrams/implementacao.png}
     \hfill
 \end{figure}
+
+\section{Sensores}
+
+Os sensores do arduino, são ligados através da protoboard até o arduino, onde a captação é feita e as informações são tratadas, os dados são montados dentro de uma string JSON, que é enviada para o nodeMCU.
+
+Não foi utilizada a biblioteca para a montagem da string JSON por conta da memória limitada do controlador.
+
+\section{NodeMCU}
+
+Na placa de WiFi NodeMCU, as informações são recebidas através da porta serial e o json recebido é enviado para a api.

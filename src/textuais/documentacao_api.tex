@@ -9,21 +9,20 @@ Podemos conferir abaixo a documentação das rotas da API.
     \label{table_api_routes}
     \begin{tabular}{|l|l|l|}
     \hline
-    \textbf{Método} & \textbf{Rota}        & \textbf{Descrição}                           \\ \hline
-    GET             & /arduino             & Lista os arduinos                            \\ \hline
-    GET             & /arduino/:id         & Retorna os dados de um arduino               \\ \hline
-    POST            & /arduino             & Cadastra um novo arduino                     \\ \hline
-    POST, PATCH     & /arduino/:id         & Atualiza os dados de um arduino              \\ \hline
-    DELETE          & /arduino/:id         & Deleta um arduino e suas medidas capturadas  \\ \hline
-    GET             & /arduino:id/measure  & Retorna as medidas capturadas por um arduino \\ \hline
-    POST            & /arduino/:id/measure & Cadastra uma medida em um arduino            \\ \hline
-    GET             & /measure/:id         & Retorna os dados de uma medida               \\ \hline
-    POST            & /authenticate        & Retorna o Json Web Token de uma credencial   \\ \hline
-    POST            & /location            & Cria uma nova localização                    \\ \hline
-    GET             & /location/:id        & Retorna os dados de uma localização          \\ \hline
-    POST, PATCH     & /location/:id        & Atualiza os dados de uma localização         \\ \hline
-    DELETE          & /location/:id        & Deleta uma localização                       \\ \hline
-
+    \textbf{Método}  & \textbf{Rota}        & \textbf{Descrição}                           \\ \hline
+    GET              & /arduino             & Lista os arduinos                            \\ \hline
+    GET              & /arduino/:id         & Retorna os dados de um arduino               \\ \hline
+    POST             & /arduino             & Cadastra um novo arduino                     \\ \hline
+    POST, PATCH, PUT & /arduino/:id         & Atualiza os dados de um arduino              \\ \hline
+    DELETE           & /arduino/:id         & Deleta um arduino e suas medidas capturadas  \\ \hline
+    GET              & /user                & Lista os usuários                            \\ \hline
+    GET              & /user/:id            & Retorna os dados de um usuário               \\ \hline
+    POST             & /user                & Cadastra um novo usuário                     \\ \hline
+    POST, PATCH, PUT & /user/:id            & Atualiza os dados de um usuário              \\ \hline
+    DELETE           & /user/:id            & Deleta um usuário                            \\ \hline
+    POST             & /user/login          & Recebe as credenciais e retorna o token      \\ \hline
+    POST             & /measure             & Cadastra uma medida capturada                \\ \hline
+    GET              & /statistic/:id       & Retorna as estatísticas de dados do arduino  \\ \hline
     \end{tabular}
 \end{table}
 
@@ -34,4 +33,6 @@ Para a consulta de recursos é utilizado o método GET, o método DELETE é util
 
 \section{Autenticação}
 
-Uma exceção do método POST é na autenticação, os campos nome de usuário e senha são enviados para a API, que retorna um Json Web Token para que possa ser feita a autenticação de forma moderna.
+A autenticação foi feita utilizando Json Web Token, onde, uma vez que o usuário tenha feito o login na API, as informações do usuário e seu token de acesso são retornados.
+
+O token é passado para as rotas através dos cabeçalhos da requisição, onde a autenticação se faz necessária, o token enviado é validado, e caso seja invalido, o acesso ao usuário é negado.

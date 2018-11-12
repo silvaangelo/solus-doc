@@ -6,11 +6,11 @@
 
 \chapter{Introdução}
 
-A captação de energia elétrica no Brasil, é composta por diversas fontes primárias, dentre as quais, se destacam o uso de energia eólica, energia hidráulica e energia solar, dentre as tais, a energia solar de destaca por sua baixa implicação a questões ambientais.
+A captação de energia elétrica no Brasil, é composta por diversas fontes primárias, dentre as quais, se destacam o uso de energia eólica, energia hidráulica e energia solar, analisadas as diversas fontes de energia, dentre as tais, a energia solar se destaca por sua baixa implicação a questões ambientais.
 
 A energia solar, vem sendo cada vez mais amplamente utilizada utilizada no Brasil, tanto por empresas de pequeno a grande porte, quanto pelo mercado residencial, segundo a projeção da Associação Brasileira de Energia Solar Fotovoltaica (Absolar), tal forma de captação de energia representa 0,83\% de toda a energia captada no país \cite{maturidade_absolar}.
 
-Mesmo com o amadurecimento da captação de energia solar no país, o projeto de instalação de uma estação de captura de energia solar, necessita ser feito juntamente com uma prévia análise de dados no local, para que, resultados satisfatórios possam ser obtidos a mínimo prazo.
+Mesmo com o amadurecimento da captação de energia solar no país, para a instalação de uma estação de captação de energia solar, é recomendado que seja feita uma prévia análise de dados no local, para que, resultados satisfatórios possam ser obtidos a mínimo prazo.
 
 O trabalho desenvolvido visa fornecer uma ferramenta para a captura e análise de dados meteorológicos, visando a geração de informações necessárias para o usuário.
 
@@ -37,10 +37,6 @@ O trabalho apresentado, primeiramente procura contextualizar acerca da atual sit
 Subseguindo, são apresentadas as metodologias utilizadas no desenvolvimento do projeto, decorrendo acerca das ferramentas utilizadas e conceitos nos quais o projeto se baseia, no desenvolvimento do trabalho, em seguida, é apresentado ao usuário o projeto do sistema, onde questões teóricas acerca da implementação são discutidas, seguindo o desenvolvimento do projeto, se apresenta a arquitetura e documentação do software, detalhando questões internas do desenvolvimento do software e as justificativas pelas tecnologias utilizadas.
 
 Por fim, são apresentadas as considerações finais do projeto, demonstrando os resultados obtidos, comparando os mesmos com os requisitos, procurando esclarecer os objetivos atingidos ou não, e então, é feita uma projeção do projeto para o futuro, apresentando um caminho para o projeto de manutenção e continuidade do software.
-
-\chapter{Referencial Teórico}
-
-TODO: REFERENCIAL TEORICO
 
 \chapter{Desenvolvimento}
 
@@ -137,6 +133,7 @@ O diagrama de caso de uso descrito na figura \ref{fig:figure_diagrama_caso_uso},
     \caption{Diagrama de caso de uso} \label{fig:figure_diagrama_caso_uso}
     \includegraphics[scale=0.6]{diagrams/caso_de_uso.png}
     \hfill
+\legend{Fonte: Produção do autor.}
 \end{figure}
 
 Através do diagrama do caso de uso contido na figura \ref{fig:figure_diagrama_caso_uso}, é possível identificarmos apenas um ator na aplicação, que é o usuário do sistema, interessado em visualizar informações geradas pela análise estatística dos dados capturados. O mesmo interage com a aplicação através da interface de usuário, realizando cadastros e consultas.
@@ -161,7 +158,7 @@ Utilizando de tabelas, este capítulo descreve de forma detalhada cada um dos ca
     \ABNTEXfontereduzida
     \caption{Consultar estatísticas}
     \label{table:usecase_consultar_estatisticas}
-    \begin{tabular}{{l}|p{10.5cm}}
+    \begin{tabularx}{\textwidth}{{l}|p{10.5cm}}
 
     \hline
 
@@ -188,14 +185,14 @@ Utilizando de tabelas, este capítulo descreve de forma detalhada cada um dos ca
 
     \hline
 
-    \end{tabular}
+    \end{tabularx}
 \end{table}
 
 \begin{table}[H]
     \ABNTEXfontereduzida
     \caption{Especificações do caso de uso consultar medidas}
     \label{my-label}
-    \begin{tabular}{{l}|p{10.5cm}}
+    \begin{tabularx}{\textwidth}{{l}|p{10.5cm}}
 
     \hline
 
@@ -213,14 +210,16 @@ Utilizando de tabelas, este capítulo descreve de forma detalhada cada um dos ca
 
     \multirow{2}{*}{Exceções e fluxos alternativos} & Caso não existam medidas capturadas para a estação meteorológica, retorna uma lista vazia de dados \\
 
-    \end{tabular}
+    \hline
+
+    \end{tabularx}
 \end{table}
 
 \begin{table}[H]
     \ABNTEXfontereduzida
     \caption{Especificação do caso de uso manter usuários}
     \label{my-label}
-    \begin{tabular}{{l}|p{10.5cm}}
+    \begin{tabularx}{\textwidth}{{l}|p{10.5cm}}
 
     \hline
 
@@ -239,14 +238,16 @@ Utilizando de tabelas, este capítulo descreve de forma detalhada cada um dos ca
     \multirow{2}{*}{Exceções e fluxos alternativos} & Caso não existam usuários cadastrados no sistema, exibe uma mensagem de aviso ao usuário \\
     & Para o cadastro ou atualização dos dados de um usuário, caso existam dados inválidos que foram dados como entrada, ao confirmar a operação, exibe uma mensagem de erro ao usuário \\
 
-    \end{tabular}
+    \hline
+
+    \end{tabularx}
 \end{table}
 
 \begin{table}[H]
     \ABNTEXfontereduzida
     \caption{Especificação do caso de uso manter estações meteorológicas}
     \label{my-label}
-    \begin{tabular}{{l}|p{10.5cm}}
+    \begin{tabularx}{\textwidth}{{l}|p{10.5cm}}
 
     \hline
 
@@ -265,14 +266,16 @@ Utilizando de tabelas, este capítulo descreve de forma detalhada cada um dos ca
     \multirow{2}{*}{Exceções e fluxos alternativos} & Caso não existam estações cadastradas no sistema, exibe uma mensagem de aviso ao usuário \\
     & Para o cadastro ou atualização dos dados de uma estação, caso existam dados inválidos que foram dados como entrada, ao confirmar a operação, exibe uma mensagem de erro ao usuário \\
 
-    \end{tabular}
+    \hline
+
+    \end{tabularx}
 \end{table}
 
 \begin{table}[H]
     \ABNTEXfontereduzida
     \caption{Especificação do caso de uso editar perfil}
     \label{my-label}
-    \begin{tabular}{{l}|p{10.5cm}}
+    \begin{tabularx}{\textwidth}{{l}|p{10.5cm}}
 
     \hline
 
@@ -289,7 +292,9 @@ Utilizando de tabelas, este capítulo descreve de forma detalhada cada um dos ca
     \hline
     Exceções e fluxos alternativos & Caso na edição do perfil do usuário atual existam dados inválidos que foram dados como entrada, ao confirmar a operação, exibe uma mensagem de erro ao usuário \\
 
-    \end{tabular}
+    \hline
+
+    \end{tabularx}
 \end{table}
 
 \subsection{Requisitos não funcionais}
@@ -320,106 +325,561 @@ Neste projeto, para que se pudesse proporcionar ao usuário melhor segurança em
 
 \subsection{Arquitetura macro}
 
-TODO: Arquitetura macro
+A arquitura de um software segundo \citeauthoronline{engenharia_software_sommerville}, (\citeyear{engenharia_software_sommerville}):
+
+\begin{citacao}
+    É o elo crítico entre o projeto e a engenharia de requisitos, pois identifica os principais componentes estruturais de um sistema e os relacionamentos entre eles. O resultado do processo de projeto de arquitetura é um modelo de arquitetura que descreve como o sistema está organizado em um conjunto de componentes de comunicação. (p.104).
+\end{citacao}
+
+Procurando descrever os casos de uso do sistema, optou-se por utilizar uma descrição da arquitetura macro do software através de figuras, descrevendo o todo do sistema através de simples componentes, pode-se conferir a arquitetura através da figura \ref{fig:figure_arq_macro}
+
+\begin{center}
+\begin{figure}[H]
+    \centering
+    \caption{Representação da arquitetura} \label{fig:figure_arq_macro}
+    \includegraphics[scale=0.47]{diagrams/arq_macro.png}
+    \hfill
+\legend{Fonte: Produção do autor.}
+\end{figure}
+\end{center}
+
+Através do desenho da arquitetura do software podemos identificar as relações entre os diversos componentes do sistema, porém, de uma forma a qual a qual as partes interessadas no projeto ainda podem interagir e entender o que está sendo proposto.
+
+No diagrama, podemos identificar os sensores conectados diretamente com a estação meteorológica (traço preenchido), enviando as informações capturadas para a estação meteorológica através de conexão web (traço pontilhado), que, após receber as informações as envia para o sistema Web, que as persiste em banco de dados.
+
+O usuário, interage com o sistema diretamente através da interface que disponibiliza gráficos para que o acompanhamento possa ser realizando, consultando as informações através de conexão web com o sistema.
+
+Dessa forma, pode-se descrever a arquitetura do projeto, visando, atingir o objetivo definido através da engenharia de requisitos com um projeto agora melhor detalhado, tanto para as partes interessadas, quanto para a equipe de software, nas seções seguintes, é descrita de forma técnicas os componentes do sistema, através de diagramas UML.
 
 \section{Diagramas do sistema}
 
-TODO: Diagramas do sistema
+Foram utilizados para a descrição dos componentes da aplicação os diagramas UML, os diagramas de classe, de sequência e de estado descrevem o software nos capítulos seguintes.
 
 \subsection{Diagrama de classes}
 
-Como podemos verificar no diagrama descrito na figura \ref{figure_diagrama_classe} as entidades do sistema consistem na medida, que é a informação que foi capturada pelo arduino, as entidades arduino e usuário também estão presentes, todas extendem da Model do Mongoose.
+"Os diagramas de classe são usados no desenvolvimento de um modelo de sistema orientado a objetos para mostrar as classes de um sistema e as associações entre essas classes. Em poucas palavras, uma classe de objeto pode ser pensada como uma definição geral de um tipo de objeto do sistema." \cite{engenharia_software_sommerville}.
 
+O sistema desenvolvido implementa o paradigma de programação funcional de forma pouco restrita, portanto, alguns conceitos de programação orientada a objetos foram descartados. Porém, o diagrama de classes também pode representar as características das entidades do sistema.
+
+\begin{center}
 \begin{figure}[H]
-    \label{figure_diagrama_classe}
     \centering
-    \caption{Diagrama de classes}
-    \includegraphics[scale=0.5]{diagrams/classe.png}
+    \caption{Diagrama de classes \label{fig:figure_diagrama_classe}}
+    \includegraphics[scale=0.8]{diagrams/classe.png}
     \hfill
+\legend{Fonte: Produção do autor.}
 \end{figure}
+\end{center}
+
+Como podemos verificar no diagrama descrito na figura \ref{fig:figure_diagrama_classe} as entidades do sistema consistem na medida, que é a informação que foi capturada pela estação meteorológica, que pertence a uma estação, a entidade de estação meteorológica, que possui nenhuma a muitas medidas capturadas, e a entidade de usuário, que representa um usuário cadastrado no sistema.
+
+As propriedades de cada entidade são especificadas abaixo,descartando aqui, seus comportamentos, pois, as mesmas são manipuladas através das camadas, que são descritas nas seções que descrevem o comportamento do sistema, através de diagramas de sequência e estado, nas respectivas seções \ref{sec:diagrama_sequencia} e \ref{sec:diagrama_estado}.
+
+\begin{center}
+\centering
+\begin{table}[H]
+    \ABNTEXfontereduzida
+    \caption{Especificação da Model base}
+    \label{my-label}
+    \begin{tabularx}{\textwidth}{{l}|p{13.4cm}}
+
+    \hline
+
+    \multicolumn{2}{c}{\textbf{Model}} \\
+
+    \hline
+    Descrição & É a model base da aplicação, que advem do framework utilizado pra mapeamento dos objetos para o banco de dados \\
+
+    \hline
+
+    \multicolumn{2}{c}{Propriedades} \\
+
+    \hline
+    id & Identifica de forma única um objeto no banco de dados \\
+
+    \hline
+    createdAt & Data em que o objeto foi armazenado \\
+
+    \hline
+    updatedAt & Data em que alguma das propriedades do objeto foi alterada pela última vez \\
+
+    \hline
+
+    \end{tabularx}
+\end{table}
+\end{center}
+
+\begin{center}
+    \centering
+    \begin{table}[H]
+        \ABNTEXfontereduzida
+        \caption{Especificação da Medida}
+        \label{my-label}
+        \begin{tabularx}{\textwidth}{{l}|p{11.66cm}}
+    
+        \hline
+    
+        \multicolumn{2}{c}{\textbf{Medida}} \\
+    
+        \hline
+        Descrição & Representada a medida que foi capturada pela estação meteorológica \\
+    
+        \hline
+    
+        \multicolumn{2}{c}{Propriedades} \\
+    
+        \hline
+        idArduino & Identificação do arduino que realizou a captura \\
+    
+        \hline
+        ambienceTemperatura & O valor que foi capturado pelo sensor de temperatura ambiente \\
+    
+        \hline
+        temperatureHumidity & Valor da temperatura capturada pelo sensor agregado de temperatura e umidade \\
+
+        \hline
+        humidity & Valor da umidade capturada pelo sensor agregado de temperatura e umidade \\
+
+        \hline
+        uvRay & Nível de radiação uv que foi medida \\
+        
+        \hline
+        rainfall & Porcentagem de chuva capturada \\
+
+        \hline
+        sunCapability & Capacidade solar que foi medida \\
+
+        \hline
+        lightIntensity & Nível da intensidade de luz capturada \\
+    
+        \hline
+    
+        \end{tabularx}
+    \end{table}
+\end{center}
+
+\begin{center}
+    \centering
+    \begin{table}[H]
+        \ABNTEXfontereduzida
+        \caption{Especificação da Estação Meteorológica}
+        \label{my-label}
+        \begin{tabularx}{\textwidth}{{l}|p{13.6cm}}
+    
+        \hline
+    
+        \multicolumn{2}{c}{\textbf{Estação meteorológica}} \\
+    
+        \hline
+        Descrição & Representa uma estação meteorológica cadastrada no sistema \\
+    
+        \hline
+    
+        \multicolumn{2}{c}{Propriedades} \\
+    
+        \hline
+        location & Descrição de onde a estação meteorológica está posicionada \\
+
+        \hline
+        name & Nome de identificação da estação meteorológica \\
+    
+        \hline
+    
+        \end{tabularx}
+    \end{table}
+\end{center}
+
+\begin{center}
+    \centering
+    \begin{table}[H]
+        \ABNTEXfontereduzida
+        \caption{Especificação do Usuário}
+        \label{my-label}
+        \begin{tabularx}{\textwidth}{{l}|p{13.60cm}}
+    
+        \hline
+    
+        \multicolumn{2}{c}{\textbf{Usuário}} \\
+    
+        \hline
+        Descrição & Representa um usuário cadastrado no sistema \\
+    
+        \hline
+    
+        \multicolumn{2}{c}{Propriedades} \\
+    
+        \hline
+        name & Nome de identificação do usuário \\
+
+        \hline
+        email & E-mail que identifica o usuário e é utilizado para login no sistema \\
+
+        \hline
+        password & Senha do usuário ao acessar o sistema, a informação é criptografada \\
+    
+        \hline
+    
+        \end{tabularx}
+    \end{table}
+\end{center}
 
 \subsection{Diagrama de sequência}
+\label{sec:diagrama_sequencia}
 
-Apresentação do diagrama de sequencia do projeto.
+"Os diagramas de sequência em UML são usados, principalmente, para modelar as interações entre os atores e
+os objetos em um sistema e as interações entre os próprios objetos. A UML tem uma sintaxe rica para diagramas
+de sequência, que permite a modelagem de vários tipos de interação." \cite{engenharia_software_sommerville}.
+
+Nesta seção, é apresentado o diagrama de sequência que representa o armazenamento de uma medida capturada por uma estação meteorológica, apresentando desde a saída dos dados, até a sua persistência em banco.
+
+Para melhor aproveitamento da estação meteorológica e para que não haja necessidade de espera de uma resposta do software, utilizou-se da programação assíncrona para responder com sucesso a estação, os dados são enviados, e uma resposta de sucesso é emitido a estação, porém, os dados são processados em seguida, deixando livre a fila de envio na estação.
 
 \begin{figure}[H]
-    \label{figure_diagrama_sequencia}
     \centering
-    \caption{Diagrama de sequência}
+    \caption{Diagrama de sequência \label{fig:figure_diagrama_sequencia}}
     \includegraphics[scale=0.40]{diagrams/sequencia.png}
     \hfill
+\legend{Fonte: Produção do autor.}
 \end{figure}
 
-Como descrito no diagrama de sequência representado na figura \ref{figure_diagrama_sequencia} a aplicação é composta por 3 principais camadas.
+Como descrito no diagrama de sequência representado na figura \ref{fig:figure_diagrama_sequencia} a aplicação é composta por 3 principais camadas, seguindo um modelo que são descritas nos capítulos seguintes.
 
 \subsubsection{Controlador}
 
-Na camada de controle, os dados são recebidos e passam por uma básica validação através, porém não sofrem a interferência das regras de negócio.
-
-Nessa camada, os dados são recebidos e retornados ao cliente, é uma interface de acesso a aplicação, geralmente, essa camada recebe objetos de requisições HTTP.
-
-\subsubsection{Serviço}
-
-Na camada de serviço as ações são os casos de uso, o caso de uso responsável por aquela ação trabalha, inserindo os dados através do repositório no banco de dados, e então, retorna as informações.
+Na camada de controle, após ser recebida uma mensagem da estação meteorológica, a mesma retorna sucesso para a estação, porém sem a confirmação das informações, que são logo em seguida, validadas, e então são tratadas utilizando as regras descridas na seção \ref{sec:tratamento_dados}.
 
 \subsubsection{Repositório}
 
-Dentro da camada de repositório, são recebidos dados que, através de uma camada de infraestrutura são persistidos, retornando então, uma entidade.
+A camada de repositório trabalha como uma intermediaria entre o controlador da aplicação onde a validação dos dados é feita e a camada de persistência da aplicação, ela trabalha verificando se os dados persistidos estão corretos e fornece um local comum para consulta e armazenamento das informações.
+
+\subsubsection{Modelo}
+
+A camada de modelos, é composta pelas entidades do sistema, é a única camada da aplicação que possui acesso direto ao banco de dados, e é gerenciada através da ferramenta de comunicação com o banco de dados, abstraindo assim, o acesso ao baixo nível da persistência do software.
 
 \subsection{Diagrama de estado}
+\label{sec:diagrama_estado}
 
-Apresentação dos estados de uma entidade de medida que foi capturada ao longo da interação com o sistema.
+"O diagrama de máquina de estados demonstra o comportamento de um elemento por meio de um conjunto finito de transições de estado, ou seja, uma máquina de estados." \cite{uml_pratica}.
 
+O diagrama de estado abaixo compreende a consulta de estatísticas na aplicação, demonstrando, o estado de uma requisição no sistema até sua resposta ao usuário.
+
+\begin{center}
 \begin{figure}[H]
-    \label{figure_diagrama_estado}
     \centering
-    \caption{Diagrama de estado}
-    \includegraphics[scale=0.6]{diagrams/estado.png}
+    \caption{Diagrama de estado \label{fig:figure_diagrama_estado}}
+    \includegraphics[scale=0.7]{diagrams/estado.png}
     \hfill
+\legend{Fonte: Produção do autor.}
 \end{figure}
+\end{center}
 
-Conforme descrito na figura \ref{figure_diagrama_estado} os estados durante o armazenamento de uma de uma medida são:
+Na figura 5 podemos identificar os estados como sendo a estatística requisitada ao sistema, a requisição sendo identificada como válido, então, os dados são encontrados no sistema e as estatísticas são apresentadas ao usuário.
 
-\subsubsection{Validando requisição}
-
-A autenticação do arduino na API foi feita e a requisição HTTP para o armazenamento de uma medida foi feita até a API.
-Nesse estado, a requisição está passando por uma validação básica, verificando os tipos e formato dos dados.
-
-\subsubsection{Armazenando em banco de dados}
-
-A medida é valida e está sendo armazenada no banco de dados, após, ela é retornada a camada de serviço.
+No estado identificado como \textbf{Validando requisição}, a mesma é validada, identificando se o usuário realmente possui acesso ao sistema e se os filtros que foram aplicados são também válidos, após os dados são consultados e passados para a geração de estatísticas, nos estados \textbf{Consultando dados} e \textbf{Gerando estatísticas}, respectivamente, por fim, no estado identificado como \textbf{Apresentando ao usuário} os gráficos são renderizados na tela, e o ciclo de vida da requisição termina.
 
 \section{Arquitetura das estações meteorológicas}
 
-Foi utilizado para a captura dos dados o microcontrolador arduino, que, com sensores conectados a sua porta serial, prepara os dados e envia uma string json contendo as medidas para o nodeMCU.
-A placa serial nodeMCU é responsável por se conectar a internet através de Wifi e envia o json para a api.
+Para a construção da arquitetura da estação meteorológica, foi utilizado como central o microcontrolador arduino, diversos sensores para captura das informações e a placa WiFi NodeMCU para conexão a internet e gerenciamento das requisições com o servidor.
+
+Mais detalhes acerca dos componentes utilizados são descritos nas seçõesAmbiente de desenvolvimento integrado subsequentes.
+
+\subsection{Arduino}
+\label{sec:arduino}
+
+Como definido em seu site oficinal: "O Arduino é uma plataforma eletrônica de código aberto baseada em hardware e software de fácil utilização. É destinado a qualquer pessoa que construa projeto interativos." \cite{arduino_about}.
+
+Ele fornece um controlador eletrônico único baseado no microprocessador ATmega328, desenvolvido em c++, componentes eletrônicos oficinais para a construção de aplicações interativas e uma IDE (Ambiente de desenvolvimento integrado) para a construção de sistemas.
+
+Para a construção da estação meteorológica descrita, foi utilizado arduino UNO, em sua versão contendo 6 portas analógicas, 6 portas digitais uma cpu com velocidade de 16 MHz e 32 KB de armazenamento interno.
+
+Foram utilizados diversos sensores conectados as portas seriais do arduino para coleta de dados, após coletados os dados, o arduino monta a requisição que o servidor espera em formato JSON, é um formato de dados similar ao XML, porém, utiliza a sintaxe de objetos do javascript, para a construção do JSON não foi utilizada nenhuma biblioteca, por conta da quantidade de memória limitada do arduino.
 
 \subsection{Sensores}
+\label{sec:sensores}
 
-Os sensores do arduino, são ligados através da protoboard até o arduino, onde a captação é feita e as informações são tratadas, os dados são montados dentro de uma string JSON, que é enviada para o nodeMCU.
+Para a captura das informações foram utilizados os sensores de temperatura, umidade do ar com temperatura em relação a umidade, sensor de chuva digital/analógico, sensor de intensidade luminosa, radiação UV e capacidade solar.
 
-Não foi utilizada a biblioteca para a montagem da string JSON por conta da memória limitada do controlador.
+Os sensores utilizados se conectam com o arduino através de suas portas seriais, emitindo as informações nas portas seriais para que o arduino possa as capturar.
+
+Os sensores utilizados são melhor descritos nas tabelas de descrição abaixo.
+
+\begin{center}
+    \centering
+    \begin{table}[H]
+        \ABNTEXfontereduzida
+        \caption{Especificação do sensor de umidade e temperatura em relação a umidade}
+        \label{my-label}
+        \begin{tabularx}{\textwidth}{{l}|p{13.1cm}}
+    
+        \hline
+    
+        \multicolumn{2}{c}{\textbf{Sensor de umidade e temperatura relativa DHT11}} \\
+    
+        \hline
+        Descrição & Capturam os valores de umidade e temperatura em relação a umidade \\
+    
+        \hline
+    
+        Conexão & Se conecta com o arduino através da porta análogica 0 (A0) \\
+
+        \hline
+
+        \multicolumn{2}{c}{Identificação dos valores} \\
+    
+        \hline
+        Umidade & É representada por porcentagem (0 a 100\%) \\
+
+        \hline
+        Temperatura & Capta a temperatura atual em $^\circ$C \\
+    
+        \hline
+    
+        \end{tabularx}
+    \end{table}
+\end{center}
+
+\begin{center}
+    \centering
+    \begin{table}[H]
+        \ABNTEXfontereduzida
+        \caption{Especificações do sensor de temperatura ambiente}
+        \label{my-label}
+        \begin{tabularx}{\textwidth}{{l}|p{13.1cm}}
+    
+        \hline
+    
+        \multicolumn{2}{c}{\textbf{Sensor de temperatura ambiente Thermistor}} \\
+    
+        \hline
+        Descrição & Captura o valor da temperatura ambiente \\
+    
+        \hline
+    
+        Conexão & Se conecta com o arduino através da porta analógica 1 (A1) \\
+
+        \hline
+
+        \multicolumn{2}{c}{Identificação dos valores} \\
+
+        \hline
+        Temperatura & Capta a temperatura ambiente atual em $^\circ$C \\
+    
+        \hline
+    
+        \end{tabularx}
+    \end{table}
+\end{center}
+
+\begin{center}
+    \centering
+    \begin{table}[H]
+        \ABNTEXfontereduzida
+        \caption{Especificações do sensor de luminosidade LDR}
+        \label{my-label}
+        \begin{tabularx}{\textwidth}{{l}|p{13.4cm}}
+    
+        \hline
+    
+        \multicolumn{2}{c}{\textbf{Sensor de luminosidade LDR}} \\
+    
+        \hline
+        Descrição & Captura o valor da intensidade luminosa \\
+    
+        \hline
+    
+        Conexão & Se conecta com o arduino através da porta analógica 2 (A2) \\
+
+        \hline
+
+        \multicolumn{2}{c}{Identificação dos valores} \\
+
+        \hline
+        < 100 & Claridade Intensa \\
+        
+        \hline
+        100 - 300 & Claridade alta \\
+        
+        \hline
+        300 – 500 & Claridade acima da média \\
+        
+        \hline
+        500 – 700 & Claro \\
+        
+        \hline
+        700 - 850 & Pouca Claridade \\
+        
+        \hline
+        850 - 1000 & Muito Pouca Claridade \\
+        
+        \hline
+        > 1000 & Escuro \\
+    
+        \hline
+    
+        \end{tabularx}
+    \end{table}
+\end{center}
+
+\begin{center}
+    \centering
+    \begin{table}[H]
+        \ABNTEXfontereduzida
+        \caption{Especificações do sensor de nível de chuva}
+        \label{my-label}
+        \begin{tabular*}{\textwidth}{{l}|p{13.5cm}}
+    
+        \hline
+    
+        \multicolumn{2}{c}{\textbf{Sensor de chuva}} \\
+    
+        \hline
+        Descrição & Captura através do sensor digital se está chovendo (1) ou não (0) e através do sensor análogico de 0 a 4.5 \\
+    
+        \hline
+    
+        Conexão & Se conecta com o arduino através da porta analógica 3 (A3) \\
+
+        \hline
+
+        \multicolumn{2}{c}{Identificação dos valores} \\
+
+        \hline
+        < 2.00      & Sem Chuva \\
+
+        \hline
+        2.00 – 3.00 & Nuvens Esparsas \\
+
+        \hline
+        3.00 – 3.99 & Nublado \\
+
+        \hline
+        4.00 – 4.50 & Chuva \\
+
+        \hline
+        > 4.50      & Chuva Intensa \\
+    
+        \hline
+    
+        \end{tabular*}
+    \end{table}
+\end{center}
+
+\begin{center}
+    \centering
+    \begin{table}[H]
+        \ABNTEXfontereduzida
+        \caption{Especificações do sensor de capacidade solar}
+        \label{my-label}
+        \begin{tabularx}{\textwidth}{{l}|p{13.5cm}}
+    
+        \hline
+    
+        \multicolumn{2}{c}{\textbf{Sensor de capacidade solar}} \\
+    
+        \hline
+        Descrição & Captura a capacidade solar utilizando fotocélula \\
+    
+        \hline
+    
+        Conexão & Se conecta com o arduino através da porta analógica 5 (A5) \\
+
+        \hline
+
+        \multicolumn{2}{c}{Identificação dos valores} \\
+
+        \hline
+        < 1,00      & Fraca \\
+
+        \hline
+        1,00 – 1,49 & Média \\
+
+        \hline
+        1,50 – 1,99 & Boa \\
+
+        \hline
+        >= 2,00     & Ótima \\
+    
+        \hline
+    
+        \end{tabularx}
+    \end{table}
+\end{center}
+
+\begin{center}
+    \centering
+    \begin{table}[H]
+        \ABNTEXfontereduzida
+        \caption{Especificações do sensor de radiação uv}
+        \label{my-label}
+        \begin{tabularx}{\textwidth}{p{5cm}|c|c|c|c|c|c}
+    
+        \hline
+    
+        \multicolumn{7}{c}{\textbf{Sensor de radiação uv}} \\
+
+        \hline
+        \multicolumn{1}{c}{Descrição} & \multicolumn{6}{c}{Captura índice uv de forma analógica (0 - 240)}  \\
+    
+        \hline
+        \multicolumn{1}{c}{Conexão} & \multicolumn{6}{c}{Se conecta com o arduino através da porta analógica 4 (A4)} \\
+
+        \hline
+
+        \multicolumn{7}{c}{Identificação dos valores} \\
+
+        \hline
+        \centering{Índice UV} & 0 & 1 & 2 & 3 & 4 & 5 \\
+
+        \hline
+        \centering{Voltagem (mV)} & <50 & 227 & 318 & 408 & 503  & 606 \\
+
+        \hline
+        \centering{Valor analógico} & <10 & 46 & 65 & 83 & 103 & 124 \\
+
+        \hline
+        \centering{Índice UV} & 6   & 7   & 8   & 9   & 10   & 11+  \\
+
+        \hline
+        \centering{Voltagem (mV)} & 696 & 795 & 881 & 976 & 1079 & 1170 \\
+
+        \hline
+        \centering{Valor analógico} & 142 & 162 & 180 & 200 & 221 & 240 \\
+    
+        \hline
+    
+        \end{tabularx}
+    \end{table}
+\end{center}
+
+Alguns dados foram tratados antes de serem armazenados em banco de dados, detalhes acerca da transformação de dados que foi aplicada são melhor abordados na seção \ref{sec:tratamento_dados}.
 
 \subsection{NodeMCU}
+\label{sec:nodemcu}
 
-Na placa de WiFi NodeMCU, as informações são recebidas através da porta serial e o json recebido é enviado para a api.
+Para a conexão e envio dos dados para o servidor, foi utilizada a placa wifi NodeMCU ESP8266, conectada nas portas TX e RX.
+
+A placa NodeMCU fornece possibilidade de conexão com rede wifi e roteamento wifi e pode ser programada em linguagem LUA ou utilizando a IDE do Arduino.
+
+No projeto, o arduino se conecta com o NodeMCU através das portas TX e RX, onde o NodeMCU espera que os dados que foram capturados pelo Arduino são escritos em sua porta serial, então, os dados são enviados através de requisição HTTP para o servidor.
+
+As configurações da placa NodeMCU são definidas no começo de seu arquivo de código fonte (linhas 3 - 12).
 
 \section{Arquitetura do software}
 \label{sec:arquitetura_software}
 
-A arquitetura da aplicação desenvolvida pode ser resumida em dados sendo capturados através de sensores conectados a um microcontrolador arduino, serão captadas as seguintes informações: temperatura, umidade do ar, temperatura em relação a umidade, porcentagem de chuva, radiação uv, intensidade luminosa e capacidade solar.
+Segundo \citeauthoronline{clean_architecture}, um dos maiores pensadores sobre o assunto da qualidade de software na modernidade, em seu livro Clean Architecture (Arquitetura limpa): "O software foi inventado para ser soft”. Pretendia ser uma maneira de alterar facilmente o comportamento das máquinas. Se quiséssemos que o comportamento das máquinas fosse difícil de mudar, teríamos chamado de hardware". \cite{clean_architecture}.
 
-Dados esses, que serão enviados através de requisições HTTP para uma API, serão armazenadas em banco de dados e então, será feita uma análise estatística dessas informações.
+A arquitetura de software desenvolvida utiliza da separação dos componentes de software em pacotes que são exportados e podem ser utilizados em qualquer parte da aplicação, separando as responsabilidades do sistema, utilizando também os benefícios de técnicas do paradigma de programação funcional, foi possível isolar os pontos de efeitos colaterais da aplicação, deixando os comportamentos da aplicação, mais previsíveis.
 
-A interface do usuário final com a aplicação, será feita através de uma aplicação web, onde os dados analisados serão disponibilizados e o usuário fará consultas a essas informações.
+Para a construção, foi utilizado clássico modelo de cliente servidor, onde a aplicação do lado cliente tem a responsabilidade de renderizar o que o cliente vê (front end) e a aplicação no lado servidor tem a responsabilidade de aplicar regras de negócio, realizar armazenamento e análise dos dados solicitados (back end), no sistema construído, o lado cliente e o lado servidor se comunicam através de protocolo HTTP, utilizando o conceito restful no lado servidor que é descrito na seção \ref{sec:servidor} e o lado cliente utiliza a tecnologia SPA (Single Page Application), que é detalhada na seção \ref{sec:cliente}
 
 \subsection{Servidor}
+\label{sec:servidor}
 
-TODO: ARQUITETURA DE SERVIDOR
+O lado do servidor foi construído utilizando NodeJS, um runtime para Javascript no lado servidor, foi disponibilizada para a aplicação uma API (Application Programming Interface) via HTTP para a comunicação tanto da interface do usuário quanto para o arduino, utilizando os métodos RESTful.
+Uma RESTful API é uma interface de acesso a aplicação aplicação que utiliza requisições http para a criação, atualização, consulta e exclusão de dados \cite{restful_api}. No sistema desenvolvido, foi utilizado o formato de dados JSON.
 
-\subsubsection{Implementação do servidor}
-
-TODO: IMPLEMENTACAO DO SERVIDOR
+A documentação da api pode ser conferida na seção \ref{sec:doc_api}.
 
 \subsubsection{Banco de dados}
 
@@ -431,29 +891,26 @@ O banco MongoDB foi escolhido pela sua facilidade ao trabalhar com escrita de da
 
 Com todas as vantagens do banco de dados, a aplicação tira vantagem, se beneficiando no que toca performance, disponibilidade e mutabilidade das informações.
 
-\subsubsection{Tratamento dos dados}
+\subsubsection{Tratamento dos dados meteorológicos}
+\label{sec:tratamento_dados}
 
-Os dados foram exibidos da mesma forma que foram capturados, com exceção das informações de intensidade de luz, que foi invertida para melhor exibição no gráfico, e pela medida de nível de chuva, que além de invertida, foi transformada em porcentagem.
+Os dados que foram capturados pelas estações, tiveram seus valores mantidos, com exceção dos valores de intensidade de luz e quantidade de chuva, o valor de intensidade de luz precisou ser invertido para melhor visualização das informações, considerando $x$ como o valor que foi capturado, com sua máxima identificada como $1024$, a equação $1024 - x$ é aplicada, invertendo o valor, caso o resultado seja negativo, o valor $0$ é considerado em seu lugar, para a quantidade de chuva, a mesma regra foi aplicada, porém, o valor também foi convertido para \%, então a fórmula para obtenção do valor que será armazenado para quantidade de chuva será $((1024-x)/1024)100$, novamente, dado resultado negativo, será considerada a porcentagem $0$.
 
 \subsubsection{Análise dos dados}
 
-\subsubsubsection{Médias}
-
-A média aplicada em cima dos dados, é separada por um intervalo de tempo, como exemplo, caso o usuário informe que o intervalo requisitado é de uma hora, os dados são agrupados por cada hora e então, uma média é aplicada nesses dados, exibindo as médias em intervalos de horas no gráfico.
-
-\subsubsubsection{Mínimas e Máximas}
-
-TODO: Mínimas e máximas
+São retornados ao usuário os dados de médias, mínimas e máximas, por serem os valores mais significantes para o acompanhamento meteorológico na situação identificada.
+Para obtenção das médias dos valores, foi aplicada a função de agregação do MongoDB, reunindo as informações por intervalo de tempo e aplicando a função de média sobre o resultado.
 
 \subsubsection{Documentação da API}
+\label{sec:doc_api}
 
-Podemos conferir abaixo a documentação das rotas da API.
+Na tabela \ref{table:table_api_routes} são detalhadas as rotas da api, documentando os métodos que foram utilizados, os endereços de cada uma das rotas e sua descrição.
 
 \begin{table}[H]
     \centering
     \caption{Descrição das rotas da API}
-    \label{table_api_routes}
-    \begin{tabular}{|l|l|l|}
+    \label{table:table_api_routes}
+    \begin{tabularx}{\textwidth}{l|l|l}
     \hline
     \textbf{Método}  & \textbf{Rota}        & \textbf{Descrição}                           \\ \hline
     GET              & /arduino             & Lista os arduinos                            \\ \hline
@@ -469,16 +926,317 @@ Podemos conferir abaixo a documentação das rotas da API.
     POST             & /user/login          & Recebe as credenciais e retorna o token      \\ \hline
     POST             & /measure             & Cadastra uma medida capturada                \\ \hline
     GET              & /statistic/:id       & Retorna as estatísticas de dados do arduino  \\ \hline
+    \end{tabularx}
+\end{table}
+
+Nas tabelas abaixo, podemos conferir o detalhamento de cada uma das rotas da API, para todos os casos, os dados que forem retornados da API, são encapsulados na variável data dentro do corpo de resposta da requisição HTTP, no caso de listagem de dados, a variável data é um vetor que armazena as entidades listadas e no retorno de uma única entidade, a variável data é um objeto contendo os dados que foram retornados.
+
+Juntamente com os dados, o campo success é retornado, quando verdadeiro, a requisição foi processada com sucesso, caso contrário, a requisição foi processada sem sucesso. Para todos os retornos, considere também os campos adicionais informados na tabela \ref{table:campos_adicionais}.
+
+\begin{table}[H]
+    \centering
+    \caption{Especificações das rotas de listagem e retorno de arduino}
+    \begin{tabular}{c|c|c}
+    \hline
+    \multicolumn{3}{c}{\textbf{GET /arduino e GET /arduino/:id}} \\ \hline
+    \multicolumn{3}{c}{Saída}                                                          \\ \hline
+    \textbf{Propriedade}         & \textbf{Tipo}         & \textbf{Descrição}            \\  \hline
+    name                         & String                & Nome da estação               \\  \hline
+    location                     & String                & Localização da estação \\
+
+    \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Descrição dos campos adicionais \label{table:campos_adicionais}}
+    \begin{tabular}{c|c|c}
+    \hline
+    \multicolumn{3}{c}{\textbf{Campos adicionais}} \\ \hline
+    \textbf{Propriedade}         & \textbf{Tipo}         & \textbf{Descrição}            \\  \hline
+    \_id                         & String                & Identificador da entidade no banco de dados      \\  \hline
+    createdAt                    & String                & Data de inserção do registro no banco de dados         \\ \hline
+    updatedAt                    & String                & Data da última atualização em dados do registro         \\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Especificações das rotas de atualização e cadastro de arduino}
+    \begin{tabular}{c|c|c}
+    \hline
+    \multicolumn{3}{c}{\textbf{POST /arduino e POST /arduino/:id}} \\ \hline
+    \multicolumn{3}{c}{Entrada}                                                        \\ \hline
+    \textbf{Propriedade}         & \textbf{Tipo}         & \textbf{Descrição}            \\  \hline
+    name                         & String                & Nome da estação               \\  \hline
+    location                     & String                & Localização da estação \\
+
+    \hline
+
+    \multicolumn{3}{c}{Saída}                                                        \\ \hline
+    \textbf{Propriedade}         & \textbf{Tipo}         & \textbf{Descrição}            \\  \hline
+    name                         & String                & Nome da estação               \\  \hline
+    location                     & String                & Localização da estação \\
+
+    \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Especificações da rota exclusão de arduino}
+    \begin{tabular}{c|c|c}
+    \hline
+    \multicolumn{3}{c}{\textbf{DELETE /arduino/:id}} \\ \hline
+    \multicolumn{3}{c}{Saída}                                                          \\ \hline
+    \textbf{Propriedade}         & \textbf{Tipo}         & \textbf{Descrição}            \\  \hline
+    name                         & String                & Nome da estação               \\  \hline
+    location                     & String                & Localização da estação \\
+
+    \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Especificações das rotas de listagem e retorno de usuário}
+    \begin{tabular}{c|c|c}
+    \hline
+    \multicolumn{3}{c}{\textbf{GET /user e GET /user/:id}} \\ \hline
+    \multicolumn{3}{c}{Saída}                                                          \\ \hline
+    \textbf{Propriedade}         & \textbf{Tipo}         & \textbf{Descrição}            \\  \hline
+    name                         & String                & Nome do usuário               \\  \hline
+    email                        & String                & E-mail do usuário \\
+    \hline
+    password                     & String                & Senha criptografada do usuário \\
+    \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Especificações das rotas de atualização e cadastro de usuário}
+    \begin{tabular}{c|c|c}
+    \hline
+    \multicolumn{3}{c}{\textbf{POST /user e POST /user/:id}} \\ \hline
+    \multicolumn{3}{c}{Entrada}                                                        \\ \hline
+    \textbf{Propriedade}         & \textbf{Tipo}         & \textbf{Descrição}            \\  \hline
+    name                         & String                & Nome do usuário               \\  \hline
+    email                        & String                & E-mail do usuário \\
+    \hline
+    password                     & String                & Senha do usuário \\
+
+    \hline
+
+    \multicolumn{3}{c}{Saída}                                                        \\ \hline
+    \textbf{Propriedade}         & \textbf{Tipo}         & \textbf{Descrição}            \\  \hline
+    name                         & String                & Nome do usuário               \\  \hline
+    email                        & String                & E-mail do usuário \\
+    \hline
+    password                     & String                & Senha criptografada do usuário \\
+
+    \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Especificações da rota de login de usuário}
+    \begin{tabular}{c|c|c}
+    \hline
+    \multicolumn{3}{c}{\textbf{POST /user/login}} \\ \hline
+    \multicolumn{3}{c}{Entrada}                                                        \\ \hline
+    \textbf{Propriedade}         & \textbf{Tipo}         & \textbf{Descrição}            \\  \hline
+    email                        & String                & E-mail do usuário \\
+    \hline
+    password                     & String                & Senha do usuário \\
+
+    \hline
+
+    \multicolumn{3}{c}{Saída}                                                        \\ \hline
+    \textbf{Propriedade}         & \textbf{Tipo}         & \textbf{Descrição}            \\  \hline
+    name                         & String                & Nome do usuário               \\  \hline
+    email                        & String                & E-mail do usuário \\
+    \hline
+    password                     & String                & Senha criptografada do usuário \\
+    \hline
+    token                     & String                & Token para autenticação no sistema \\
+    \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Especificações da rota exclusão de usuário}
+    \begin{tabular}{c|c|c}
+    \hline
+    \multicolumn{3}{c}{\textbf{DELETE /user/:id}} \\ \hline
+    \multicolumn{3}{c}{Saída}                                                          \\ \hline
+    \textbf{Propriedade}         & \textbf{Tipo}         & \textbf{Descrição}            \\  \hline
+    name                         & String                & Nome do usuário               \\  \hline
+    email                        & String                & E-mail do usuário \\
+    \hline
+    password                     & String                & Senha criptografada do usuário \\
+    \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Especificações da rota de cadastro de medida}
+    \begin{tabular}{c|c|c}
+    \hline
+    \multicolumn{3}{c}{\textbf{POST /measure}} \\ \hline
+    \multicolumn{3}{c}{Entrada}                                                        \\ \hline
+    \textbf{Propriedade}         & \textbf{Tipo}         & \textbf{Descrição}            \\  \hline
+    arduinoId                         & String                & Id da estação               \\  \hline
+    uvRay                        & Number                & Medida de radiação UV \\
+    \hline
+    rainfall                     & Number                & Medida da quantidade de chuva \\ \hline
+    sunCapability                     & Number                & Nível de capacidade solar \\ \hline
+    humidity                     & Number                & Porcentagem de umidade \\ \hline
+    ambienceTemperature                     & Number                & Medida da temperatura ambiente \\ \hline
+    temperatureHumidity                     & Number                & Medida da temperatura em relação a umidade \\ \hline
+    lightIntensity                     & Number                & Medida da intensidade de luz \\ \hline
+    \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Especificações da rota de consulta de estatísticas do arduino}
+    \begin{tabular}{c|c|c}
+    \hline
+    \multicolumn{3}{c}{\textbf{GET /statistic/:id}} \\ \hline
+    \multicolumn{3}{c}{Entrada}                                                \\ \hline
+    \textbf{Propriedade}         & \textbf{Tipo}         & \textbf{Descrição}    \\  \hline
+    from                         & String                & Data inicial    \\  \hline
+    to                        & String                & Data final \\ \hline
+    interval                        & String                & Intervalo da seleção \\ \hline
+
+    \multicolumn{3}{c}{Saída}                                                \\ \hline
+    \textbf{Propriedade}         & \textbf{Tipo}         & \textbf{Descrição}    \\  \hline
+    uvRay                        & Number                & Medida de radiação UV \\
+    \hline
+    rainfall                     & Number                & Medida da quantidade de chuva \\ \hline
+    sunCapability                     & Number                & Nível de capacidade solar \\ \hline
+    humidity                     & Number                & Porcentagem de umidade \\ \hline
+    ambienceTemperature                     & Number                & Medida da temperatura ambiente \\ \hline
+    temperatureHumidity                     & Number                & Medida da temperatura em relação a umidade \\ \hline
+    lightIntensity                     & Number                & Medida da intensidade de luz \\ \hline
+    \hline
     \end{tabular}
 \end{table}
 
 \subsection{Cliente}
+\label{sec:cliente}
 
-Foi utilizado para a construção do lado da interface do cliente a biblioteca react, que foi utilizada por sua alta performance na renderização de componentes no navegador, a interface aproveita da funcionalidade de renderização virtual da biblioteca para aumentar a performance e diminuir o custo computacional.
+Foi utilizado para a construção da aplicação lado cliente a biblioteca REACT, ela é uma biblioteca baseada em componentes e fornece, através da linguagem javascript diversas ferramentas para a construção de SPA's (Single Page Applications) \cite{what_react}. As SPA'S (Single Page Applications) são aplicações desenvolvidas para browser, utilizando javascript, que são capazes de fornecer ao usuário uma experiência sem atualização do navegador, de forma dinâmica.
 
 \subsubsection{Descrição das telas}
 
-TODO: DESCRICAO DAS TELAS
+Abaixo, pode-se conferir a documentação e descrição de cada uma das telas.
+
+\begin{figure}[H]
+    \centering
+    \caption{Tela de login} \label{fig:screen_login}
+    \includegraphics[scale=0.3]{telas/login.png}
+    \hfill
+\legend{Fonte: Produção do autor.}
+\end{figure}
+
+Na tela de login, podemos conferir o formulário de acesso ao sistema, requisitando o e-mail e senha do usuário e o botão de acesso, ao ser confirmado o login no sistema o usuário é levado até a tela principal do sistema.
+
+\begin{figure}[H]
+    \centering
+    \caption{Dashboard} \label{fig:screen_filtros}
+    \includegraphics[scale=0.3]{telas/filtros.png}
+    \hfill
+\legend{Fonte: Produção do autor.}
+\end{figure}
+
+Conforme pode-se conferir na figura \ref{fig:screen_filtros} na tela inicial do sistema, podemos conferir os filtros de dados, onde ao se escolher as informações de opção da estação meteorológica desejada, data inicial e data final de captura e qual o intervalo de tempo e confirmar a seleção de estatísticas, os resultados da figura \ref{fig:screen_graphs1} são exibidos.
+
+\begin{figure}[H]
+    \centering
+    \caption{Resultados de estatísticas \label{fig:screen_graphs1}}
+    \includegraphics[scale=0.3]{telas/grafico1.png}
+    \hfill
+\legend{Fonte: Produção do autor.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \caption{Gráficos das estatísticas \label{fig:screen_graphs2}}
+    \includegraphics[scale=0.3]{telas/grafico2.png}
+    \hfill
+\legend{Fonte: Produção do autor.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \caption{Números dos gráficos das estatísticas \label{fig:screen_graphs3}}
+    \includegraphics[scale=0.3]{telas/grafico3.png}
+    \hfill
+\legend{Fonte: Produção do autor.}
+\end{figure}
+
+São exibidas ao usuário as medidas de mínimas e máximas dos dados e os gráficos das médias que foram calculadas logo abaixo.
+
+\begin{figure}[H]
+    \centering
+    \caption{Listagem de estações meteorológicas}
+    \includegraphics[scale=0.3]{telas/estacoes.png}
+    \hfill
+\legend{Fonte: Produção do autor.}
+\end{figure}
+
+Na listagem de estações meteorológicas, é exibida ao usuário uma tabela com as informações das estações meteorológicas cadastradas, há no topo da tabela a opção de adicionar uma nova estação meteorológica e para cada uma das linhas da tabela são exibidas as ações de editar ou excluir o registro de uma estação meteorológica, os modais de cadastro e edição podem ser conferidos na figura \ref{fig:estacoes_add}, porém, no caso da edição, o modal já abre com as informações preenchidas.
+
+\begin{figure}[H]
+    \centering
+    \caption{Modal de adição e edição dos dados de uma estação \label{fig:estacoes_add}}
+    \includegraphics[scale=0.3]{telas/estacoes_add.png}
+    \hfill
+\legend{Fonte: Produção do autor.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \caption{Listagem de usuários}
+    \includegraphics[scale=0.3]{telas/usuarios.png}
+    \hfill
+\legend{Fonte: Produção do autor.}
+\end{figure}
+
+A tela de listagem de usuários, segue o mesmo comportamento da tela de listagem de estações meteorológicas, porém, para o modal de cadastro de usuário, é adicionado o campo opcional para edição de senha e e-mail.
+
+\begin{figure}[H]
+    \centering
+    \caption{Modal de adição ou edição de usuário}
+    \includegraphics[scale=0.3]{telas/usuarios_add.png}
+    \hfill
+\legend{Fonte: Produção do autor.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \caption{Visualização de perfil}
+    \includegraphics[scale=0.3]{telas/perfil.png}
+    \hfill
+\legend{Fonte: Produção do autor.}
+\end{figure}
+
+Na tela \textbf{Meu perfil} são exibidos os dados do usuário que está utilizando o sistema no momento, caso o usuário abre a função de edição, é exibido o formulário abaixo, que ao ser confirmado, é fechado novamente, exibindo somente suas informações já atualizadas.
+
+\begin{figure}[H]
+    \centering
+    \caption{Edição de perfil}
+    \includegraphics[scale=0.3]{telas/perfil_edit.png}
+    \hfill
+\legend{Fonte: Produção do autor.}
+\end{figure}
 
 % ----------------------------------------------------------
 % Finaliza a parte no bookmark do PDF
@@ -489,12 +1247,6 @@ TODO: DESCRICAO DAS TELAS
 
 \chapter{Conclusão}
 
-TODO: Conclusão
+O sistema desenvolvido é capaz de fornecer uma ferramenta ao especialista para análise e acompanhamento de informações importantes no acompanhamento de painéis solares, atingido assim seus objetivos, porém, dadas as facilidades de mudança no software e na forma como os dados foram modelados, acrescentaria mais valor ao software, serem adicionadas novas medidas meteorológicas, enriquecendo mais a forma como o usuário é informado.
 
-\section{Resultados}
-
-TODO: Resultados
-
-\section{Projeções futuras}
-
-TODO: Projeções futuras
+Medições importantes como a velocidade do vento e a quantidade em milímetros de chuva não foram adicionados, e trariam grandes avanços ao projeto. Funcionalidades geográficas como identificação das estações meteorológicas através de posicionamento em mapa seriam interessantes ferramentas para a análise meteorológica proposta.

@@ -38,11 +38,9 @@ Subseguindo, são apresentadas as metodologias utilizadas no desenvolvimento do 
 
 Por fim, são apresentadas as considerações finais do projeto, demonstrando os resultados obtidos, comparando os mesmos com os requisitos, procurando esclarecer os objetivos atingidos ou não, e então, é feita uma projeção do projeto para o futuro, apresentando um caminho para o projeto de manutenção e continuidade do software.
 
-\chapter{Desenvolvimento}
+\chapter{Metodologias}
 
-\section{Metodologias}
-
-\subsection{Programação funcional}
+\section{Programação funcional}
 
 Foi utilizado para a elaboração da arquitetura do software, conceitos de programação funcional, sua maior característica é que, se uma expressão possui um valor bem definido, então, dada uma entrada de dados, a ordem a qual o computador carregar a avaliação não afeta o resultado \cite{introduction_functional}.
 
@@ -50,15 +48,15 @@ A programação funcional, visa, através da utilização do conceito matemátic
 
 Porém, nem sempre o controle de estado colateral é levado como lei, porém, ele é contido dentro de funções que estão encapsuladas em locais específicos da aplicação, desta forma, o risco de erros diminui, visando a alta disponibilidade do sistema, que, agora, não depende mais de uma alta quantidade de contextos externos.
 
-\subsection{Controle de qualidade}
+\section{Controle de qualidade}
 
 Foram utilizadas, juntamente ao desenvolvimento do software, técnicas de controle de software orientadas ao teste, onde, a aplicação é submetida a seção de testes, tanto manuais como automatizados, foram utilizados testes de interface no sistema e testes unitários automatizados.
 
-\subsubsection{Testes de interface}
+\subsection{Testes de interface}
 
 Para que fosse validada a funcionalidade do sistema como um todo, testes de interface no sistema foram aplicados, onde, diversos usuários foram submetidos a utilização do sistema, informando possíveis dificuldades na utilização do mesmo e erros, que, uma vez corrigidos, voltam a serem analisados por usuários, até que se possa ser atingida uma mínima aceitação.
 
-\subsubsection{Testes unitários}
+\subsection{Testes unitários}
 
 Segundo \citeauthoronline{tdd_by_example}, (\citeyear{tdd_by_example}, p.10), "Desenvolvimento orientado a testes, é uma maneira de gerenciar o medo durante a programação".
 
@@ -66,7 +64,7 @@ O conceito de testes unitários em desenvolvimento de software, é fornecer a um
 
 Tal conceito fora aplicado, para garantir, de forma unitária a qualidade e segurança do código fonte do sistema, garantindo assim, a qualidade da aplicação, desde os primeiros momentos de sua implementação.
 
-\subsection{Diagramas UML 2.0}
+\section{Diagramas UML 2.0}
 
 Assim como definido por \citeauthoronline{uml_pratica}, (\citeyear{uml_pratica}), a UML:
 
@@ -76,9 +74,9 @@ Assim como definido por \citeauthoronline{uml_pratica}, (\citeyear{uml_pratica})
 
 No trabalho apresentado, mesmo que não utilizados conceitos de orientação a objetos, a linguagem de modelagem UML foi utilizada como ferramenta para detalhar partes do software, descrevendo desde os casos de uso da aplicação, as funcionalidades do sistema.
 
-\section{Ferramentas utilizadas}
+\chapter{Ferramentas utilizadas}
 
-\subsection{Astah}
+\section{Astah}
 
 Astah Community é um software para modelagem UML com suporte a UML 2, desenvolvido pela Change Vision, e disponível para diversos sistemas operacionais. Anteriormente conhecido por JUDE, um acrônimo de Java and UML Developers Environment (Ambiente para Desenvolvedores UML e Java) \cite{astah_uml}.
 
@@ -86,21 +84,21 @@ O mesmo foi utilizado no projeto para a criação dos diagramas de descrição s
 
 A utilização do software Astah, foi motivada pela sua confiabilidade na construção dos diagramas, fornecendo uma plataforma com redundâncias e por fornecer uma licença gratuita de sua versão profissional a universidades e estudantes de engenharia de software.
 
-\subsection{Javascript ES8}
+\section{Javascript ES8}
 
-O Javascript é um linguagem de programação interpretada multiparadigma, aceitando estilos variados de programação como orientação a objetos, programação funcional e imperativa \cite{mozilla_javascript}. O Javascript é uma linguagem de programação primariamente desenvolvida para o lado do cliente, sendo executada no navegador do usuário, porém, com o advento do motor de processamento do motor do Google Chrome, o v8, a linguagem foi implementada também do lado servidor, utilizando o motor de processamento nodejs, que é baseada no motor do Chrome \cite{nodejs_about}.
+O Javascript é um linguagem de programação interpretada multiparadigma, aceitando estilos variados de programação como orientação a objetos, programação funcional e imperativa \cite{mozilla_javascript}. O Javascript é uma linguagem de programação primariamente desenvolvida para o lado do cliente, sendo executada no navegador do usuário, porém, com o advento do novo motor de processamento de javascript do Google Chrome, o v8, foi criado o nodejs, que é capaz de interpretar a linguagem javascript também no lado servidor \cite{nodejs_about}.
 
 Para a implementação do projeto, foi utilizada a linguagem de programação Javascript em sua versão 8, ou como definida pela especificação do Javascript, o EcmaScript 2017.
 
 A utilização da linguagem Javascript, tanto para a construção da aplicação no lado servidor, quando para o lado cliente, foi determinada por sua alta performance e por proporcionar ferramentas que permitem a programação de forma funcional, detalhes acerca da utilização da linguagem são melhor definidos na seção acerca dos detalhes da implementação do software, em \ref{sec:arquitetura_software}.
 
-\subsection{MongoDB}
+\section{MongoDB}
 
 O MongoDB é um banco de dados de documento com suporte a escalabilidade e flexibilidade para execução de consultas e indexação necessária \cite{what_mongodb}.
 
 O mesmo foi utilizado no projeto em sua versão 4.1, a justificativa de seu uso, se da pela sua facilidade ao se trabalhar com escrita massiva de informações, proporcionando a aplicação performance e disponibilidade.
 
-\section{Engenharia de requisitos}
+\chapter{Engenharia de requisitos}
 
 Assim como descrito por \citeauthoronline{engenharia_software_pressman} (\citeyear{engenharia_software_pressman}):
 
@@ -110,19 +108,21 @@ O amplo espectro de tarefas e técnicas que levam a um entendimento dos requisit
 
 Neste capítulo, há a utilização da engenharia de requisitos para auxiliar a documentação do projeto de software, descrevendo os cenários de utilização de sistema, onde é descrito o comportamento esperado pelo usuário através de entrevistas, após, utilizando os resultados obtidos com a modelagem através de cenários, os requisitos são definidos e são criados os contratos de uso do usuário com o sistema através de casos de uso, então, é descrita a arquitetura macro do software, procurando contextualizar acerca do desenho do projeto.
 
-\subsection{Cenários do sistema}
+\section{Cenários do sistema}
 
 Há diversas formas de se medir a qualidade de um software, porém, não há outra forma de se medir a qualidade e se um objetivo foi atingido no desenvolvimento de um sistema do que a satisfação dos usuários. Se entendido como os usuários desejam interagir com o sistema, o que é esperado de entradas, processamentos e saídas, será possível a equipe construir um projeto mais objetivo e proveitoso \cite{engenharia_software_pressman}. 
 
 Portanto, nesta seção são descritos os cenários do software através de uma descrição que foi construída utilizando conteúdos das entrevistas que foram feitas com as partes interessadas no projeto.
 
-No Instituto Federal de São Paulo, no campus localizado em Boituva, o professor responsável pelo projeto descreve o sistema como uma aplicação capaz de capturar dados meteorológicos através de sensores próximos a painéis solares, ele necessita dessas informações sendo demonstradas através de gráficos, para que uma análise possa ser feita, além da disposição das informações através de gráficos, é esperado do sistema demonstrar ao usuário informações de mínimas e máximas das informações capturadas. É desejado pelo usuário que o sistema seja capaz de lidar com diversas estações meteorológicas, reunindo os dados, portando, o sistema necessita de um cadastro das estações meteorológicas, guardando informações e identificações.
+No Instituto Federal de São Paulo, no campus localizado em Boituva, o professor responsável pelo projeto descreve o sistema como uma aplicação capaz de capturar dados meteorológicos através de sensores próximos a painéis solares, ele necessita dessas informações sendo demonstradas através de gráficos, para que uma análise possa ser feita, além da disposição das informações através de gráficos, é esperado do sistema demonstrar ao usuário informações de mínimas e máximas das informações capturadas.
 
-Através do texto acima, podemos entender as necessidades do usuário para com o sistema, o cenário de software descrito é definido dentro dos requisitos nas seções seguintes.
+É desejado pelo usuário que o sistema seja capaz de lidar com diversas estações meteorológicas, reunindo os dados, portando, o sistema necessita de um cadastro das estações meteorológicas, guardando informações e identificações.
 
-\subsection{Requisitos funcionais}
+Através do texto acima, se podem entender as necessidades do usuário para com o sistema, o cenário de software descrito é definido dentro dos requisitos nas seções seguintes.
 
-Os requisitos funcionais de um software são utilizados para descrever o que ele deve fazer, eles giram em torno do tipo de sistema desenvolvido, de seus usuários e da forma como uma equipe de desenvolvimento de software busca entender o que é necessário para criar um software que atenda as necessidades de um usuário. Ao serem descritas as funcionalidades básicas de um sistema, a fazemos de forma abstrata, para que os interessados no desenvolvimento do projeto possam entender o que será feito. Porém, os mesmos podem ser detalhados de forma especifica, declarando suas entradas, saídas e exceções \cite{engenharia_software_sommerville}.
+\section{Requisitos funcionais}
+
+Os requisitos funcionais de um software são utilizados para descrever o que ele deve fazer, eles giram em torno do tipo de sistema desenvolvido, de seus usuários e da forma como uma equipe de desenvolvimento de software busca entender o que é necessário para criar um software que atenda as necessidades de um usuário. Ao serem descritas as funcionalidades básicas de um sistema, ela é feita de forma abstrata, para que os interessados no desenvolvimento do projeto possam entender o que será feito. Porém, os mesmos podem ser detalhados de forma especifica, declarando suas entradas, saídas e exceções \cite{engenharia_software_sommerville}.
 
 Foi utilizado para descrever os requisitos funcionais do sistema, a modelagem de requisitos através do diagrama de caso de uso, que busca visualizar, especificar e documentar o comportamento de um ator ao utilizar o sistema. \cite{uml_pratica}.
 
@@ -131,12 +131,12 @@ O diagrama de caso de uso descrito na figura \ref{fig:figure_diagrama_caso_uso},
 \begin{figure}[H]
     \centering
     \caption{Diagrama de caso de uso} \label{fig:figure_diagrama_caso_uso}
-    \includegraphics[scale=0.6]{diagrams/caso_de_uso.png}
+    \includegraphics[scale=0.45]{diagrams/caso_de_uso.png}
     \hfill
 \legend{Fonte: Produção do autor.}
 \end{figure}
 
-Através do diagrama do caso de uso contido na figura \ref{fig:figure_diagrama_caso_uso}, é possível identificarmos apenas um ator na aplicação, que é o usuário do sistema, interessado em visualizar informações geradas pela análise estatística dos dados capturados. O mesmo interage com a aplicação através da interface de usuário, realizando cadastros e consultas.
+Através do diagrama do caso de uso contido na figura \ref{fig:figure_diagrama_caso_uso}, é possível identificar apenas um ator na aplicação, que é o usuário do sistema, interessado em visualizar informações geradas pela análise estatística dos dados capturados. O mesmo interage com a aplicação através da interface de usuário, realizando cadastros e consultas.
 
 O requisito funcional \textbf{Consultar estatísticas} é o principal requisito do sistema, onde o usuário fará a filtragem dos dados, trazendo a ele as estatísticas geradas pela aplicação.
 O usuário irá utilizar de campos de entrada de dados para escolher qual a estação meteorológica ele deseja visualizar, a data inicial para realizar as consultas, a data final e o intervalo de tempo para cálculo das médias.
@@ -150,9 +150,9 @@ O requisito funcional \textbf{Manter arduino}, é muito similiar ao caso de uso 
 
 O requisito funcional de representado pelo caso de uso \textbf{Editar Perfil} representa a visualização e edição dos dados do usuário que está utilizando o sistema no momento, ele pode escolher editar suas informações, que exibe um formulário com os atuais dados preenchidos, onde o usuário pode realizar a alteração de suas informações.
 
-\subsubsection{Detalhamento dos casos de uso}
+\subsection{Detalhamento dos casos de uso}
 
-Utilizando de tabelas, este capítulo descreve de forma detalhada cada um dos casos de uso, apresentado as descrições, os atores relacionados, as pré condições, exceções e fluxos alternativos.
+Utilizando de tabelas, este capítulo descreve de forma detalhada cada um dos casos de uso, apresentado as descrições, os atores relacionados, as pré condições, exceções e fluxos alternativos, conforme pode ser visualizado nas tabelas de \ref{table:usecase_consultar_estatisticas} a \ref{table:usecase_edit_perfil}.
 
 \begin{table}[H]
     \ABNTEXfontereduzida
@@ -274,7 +274,7 @@ Utilizando de tabelas, este capítulo descreve de forma detalhada cada um dos ca
 \begin{table}[H]
     \ABNTEXfontereduzida
     \caption{Especificação do caso de uso editar perfil}
-    \label{my-label}
+    \label{table:usecase_edit_perfil}
     \begin{tabularx}{\textwidth}{{l}|p{10.5cm}}
 
     \hline
@@ -297,7 +297,7 @@ Utilizando de tabelas, este capítulo descreve de forma detalhada cada um dos ca
     \end{tabularx}
 \end{table}
 
-\subsection{Requisitos não funcionais}
+\section{Requisitos não funcionais}
 
 Os requisitos não funcionais, como seu próprio nome demonstra, não estão ligados diretamente ao que um software deve fazer, porém, tais requisitos são considerados tão importantes quanto os requisitos funcionais, pois podem comprometer a usabilidade e funcionalidades de um sistema \cite{engenharia_software_sommerville}.
 
@@ -307,23 +307,23 @@ Uma das formas de determinar a arquitetura do sistema seguindo os requisitos nã
 
 Nas seções subsequentes os tópicos de disponibilidade, tempo de resposta e segurança do sistema são melhor detalhados.
 
-\subsubsection{Performance}
+\subsection{Performance}
 
-Para a boa usabilidade do usuário ao interagir com um sistema, um crucial requisito funcional é o tempo de resposta de uma aplicação, pois, dependendo da lentidão com a qual as informações são disponibilizadas, um usuário pode ter problemas e, em muitos casos, não utilizar o sistema por conta do tempo de resposta.
+Para a boa usabilidade do usuário ao interagir com um sistema, um dos requisitos não funcionais mais importantes é o tempo de resposta de uma aplicação, pois, dependendo da lentidão com a qual as informações são disponibilizadas, um usuário pode ter problemas e, em muitos casos, não utilizar o sistema por conta do tempo de resposta.
 
-Na era da informação, a informação é trabalhada de forma quase instantânea, portanto, tal requisito não pode ser deixado em segundo plano ao trabalharmos no projeto de um software.
+Na era da informação, a informação é trabalhada de forma quase instantânea, portanto, tal requisito não pode ser deixado em segundo plano ao se trabalhar no projeto de um software.
 
 No sistema desenvolvido, todo o desenvolvimento do sistema foi pensando de forma a fornecer ao usuário um baixo tempo de resposta através do uso de técnicas de desenvolvimento de software focadas em alta disponibilidade, desde a implementação da arquitetura do software e de como o banco de dados é utilizado, até a forma como os dados são carregados na interface do usuário. Para atingir tal objetivo, optou-se por disponibilizar ao usuário o mínimo de informações necessárias para a interação com o sistema.
 
 Detalhes acerca da forma como o sistema é implementado para fornecer ao usuário a melhor experiência possível desde sua implementação em baixo nível são melhor descritos na seção sobre a arquitetura do software em \ref{sec:arquitetura_software}.
 
-\subsubsection{Segurança}
+\subsection{Segurança}
 
 Outro requisito muito importante para qualquer sistema é a segurança, tanto nas informações que ali estão contidas quanto no resultado final que é apresentado ao usuário, com a evolução da tecnologia, as pessoas passaram a estar muito mais próximas a sistemas de informação, colocando ali, informações sensíveis.
 
 Neste projeto, para que se pudesse proporcionar ao usuário melhor segurança em seus dados e nas informações meteorológicas que são informadas, foram utilizadas técnicas de criptografia de informações, focando primariamente em informações que são sensíveis, e, para acesso ao sistema, técnicas de bloqueio de informações através de chaves foram utilizadas, melhores detalhes acerca de como tecnologias utilizadas funcionam são relatados na seção \ref{sec:arquitetura_software}, onde a arquitetura do software proposto é apresentada.
 
-\subsection{Arquitetura macro}
+\section{Arquitetura macro}
 
 A arquitura de um software segundo \citeauthoronline{engenharia_software_sommerville}, (\citeyear{engenharia_software_sommerville}):
 
@@ -337,25 +337,25 @@ Procurando descrever os casos de uso do sistema, optou-se por utilizar uma descr
 \begin{figure}[H]
     \centering
     \caption{Representação da arquitetura} \label{fig:figure_arq_macro}
-    \includegraphics[scale=0.47]{diagrams/arq_macro.png}
+    \includegraphics[scale=0.43]{diagrams/arq_macro.png}
     \hfill
 \legend{Fonte: Produção do autor.}
 \end{figure}
 \end{center}
 
-Através do desenho da arquitetura do software podemos identificar as relações entre os diversos componentes do sistema, porém, de uma forma a qual a qual as partes interessadas no projeto ainda podem interagir e entender o que está sendo proposto.
+Através do desenho da arquitetura do software pode-se identificar as relações entre os diversos componentes do sistema, porém, de uma forma a qual a qual as partes interessadas no projeto ainda podem interagir e entender o que está sendo proposto.
 
-No diagrama, podemos identificar os sensores conectados diretamente com a estação meteorológica (traço preenchido), enviando as informações capturadas para a estação meteorológica através de conexão web (traço pontilhado), que, após receber as informações as envia para o sistema Web, que as persiste em banco de dados.
+No diagrama, pode-se identificar os sensores conectados diretamente com a estação meteorológica (traço preenchido), enviando as informações capturadas para a estação meteorológica através de conexão web (traço pontilhado), que, após receber as informações as envia para o sistema Web, que as persiste em banco de dados.
 
 O usuário, interage com o sistema diretamente através da interface que disponibiliza gráficos para que o acompanhamento possa ser realizando, consultando as informações através de conexão web com o sistema.
 
 Dessa forma, pode-se descrever a arquitetura do projeto, visando, atingir o objetivo definido através da engenharia de requisitos com um projeto agora melhor detalhado, tanto para as partes interessadas, quanto para a equipe de software, nas seções seguintes, é descrita de forma técnicas os componentes do sistema, através de diagramas UML.
 
-\section{Diagramas do sistema}
+\chapter{Diagramas do sistema}
 
 Foram utilizados para a descrição dos componentes da aplicação os diagramas UML, os diagramas de classe, de sequência e de estado descrevem o software nos capítulos seguintes.
 
-\subsection{Diagrama de classes}
+\section{Diagrama de classes}
 
 "Os diagramas de classe são usados no desenvolvimento de um modelo de sistema orientado a objetos para mostrar as classes de um sistema e as associações entre essas classes. Em poucas palavras, uma classe de objeto pode ser pensada como uma definição geral de um tipo de objeto do sistema." \cite{engenharia_software_sommerville}.
 
@@ -365,22 +365,21 @@ O sistema desenvolvido implementa o paradigma de programação funcional de form
 \begin{figure}[H]
     \centering
     \caption{Diagrama de classes \label{fig:figure_diagrama_classe}}
-    \includegraphics[scale=0.8]{diagrams/classe.png}
+    \includegraphics[scale=0.5]{diagrams/classe.png}
     \hfill
 \legend{Fonte: Produção do autor.}
 \end{figure}
 \end{center}
 
-Como podemos verificar no diagrama descrito na figura \ref{fig:figure_diagrama_classe} as entidades do sistema consistem na medida, que é a informação que foi capturada pela estação meteorológica, que pertence a uma estação, a entidade de estação meteorológica, que possui nenhuma a muitas medidas capturadas, e a entidade de usuário, que representa um usuário cadastrado no sistema.
+Como se pode verificar no diagrama descrito na figura \ref{fig:figure_diagrama_classe} as entidades do sistema consistem na medida, que é a informação que foi capturada pela estação meteorológica, que pertence a uma estação, a entidade de estação meteorológica, que possui nenhuma a muitas medidas capturadas, e a entidade de usuário, que representa um usuário cadastrado no sistema.
 
-As propriedades de cada entidade são especificadas abaixo,descartando aqui, seus comportamentos, pois, as mesmas são manipuladas através das camadas, que são descritas nas seções que descrevem o comportamento do sistema, através de diagramas de sequência e estado, nas respectivas seções \ref{sec:diagrama_sequencia} e \ref{sec:diagrama_estado}.
+As propriedades de cada entidade são especificadas nas figuras \ref{fig:spec_model_base} a \ref{fig:spec_model_user}, descartando seus comportamentos, pois, as mesmas são manipuladas através das camadas, que são descritas nas seções que descrevem o comportamento do sistema, através de diagramas de sequência e estado, nas respectivas seções \ref{sec:diagrama_sequencia} e \ref{sec:diagrama_estado}.
 
 \begin{center}
 \centering
 \begin{table}[H]
     \ABNTEXfontereduzida
-    \caption{Especificação da Model base}
-    \label{my-label}
+    \caption{Especificação da Model base \label{fig:spec_model_base}}
     \begin{tabularx}{\textwidth}{{l}|p{13.4cm}}
 
     \hline
@@ -493,8 +492,7 @@ As propriedades de cada entidade são especificadas abaixo,descartando aqui, seu
     \centering
     \begin{table}[H]
         \ABNTEXfontereduzida
-        \caption{Especificação do Usuário}
-        \label{my-label}
+        \caption{Especificação do Usuário \label{fig:spec_model_user}}
         \begin{tabularx}{\textwidth}{{l}|p{13.60cm}}
     
         \hline
@@ -523,7 +521,7 @@ As propriedades de cada entidade são especificadas abaixo,descartando aqui, seu
     \end{table}
 \end{center}
 
-\subsection{Diagrama de sequência}
+\section{Diagrama de sequência}
 \label{sec:diagrama_sequencia}
 
 "Os diagramas de sequência em UML são usados, principalmente, para modelar as interações entre os atores e
@@ -544,19 +542,19 @@ Para melhor aproveitamento da estação meteorológica e para que não haja nece
 
 Como descrito no diagrama de sequência representado na figura \ref{fig:figure_diagrama_sequencia} a aplicação é composta por 3 principais camadas, seguindo um modelo que são descritas nos capítulos seguintes.
 
-\subsubsection{Controlador}
+\subsection{Controlador}
 
 Na camada de controle, após ser recebida uma mensagem da estação meteorológica, a mesma retorna sucesso para a estação, porém sem a confirmação das informações, que são logo em seguida, validadas, e então são tratadas utilizando as regras descridas na seção \ref{sec:tratamento_dados}.
 
-\subsubsection{Repositório}
+\subsection{Repositório}
 
 A camada de repositório trabalha como uma intermediaria entre o controlador da aplicação onde a validação dos dados é feita e a camada de persistência da aplicação, ela trabalha verificando se os dados persistidos estão corretos e fornece um local comum para consulta e armazenamento das informações.
 
-\subsubsection{Modelo}
+\subsection{Modelo}
 
 A camada de modelos, é composta pelas entidades do sistema, é a única camada da aplicação que possui acesso direto ao banco de dados, e é gerenciada através da ferramenta de comunicação com o banco de dados, abstraindo assim, o acesso ao baixo nível da persistência do software.
 
-\subsection{Diagrama de estado}
+\section{Diagrama de estado}
 \label{sec:diagrama_estado}
 
 "O diagrama de máquina de estados demonstra o comportamento de um elemento por meio de um conjunto finito de transições de estado, ou seja, uma máquina de estados." \cite{uml_pratica}.
@@ -567,23 +565,21 @@ O diagrama de estado abaixo compreende a consulta de estatísticas na aplicaçã
 \begin{figure}[H]
     \centering
     \caption{Diagrama de estado \label{fig:figure_diagrama_estado}}
-    \includegraphics[scale=0.7]{diagrams/estado.png}
+    \includegraphics[scale=0.50]{diagrams/estado.png}
     \hfill
 \legend{Fonte: Produção do autor.}
 \end{figure}
 \end{center}
 
-Na figura 5 podemos identificar os estados como sendo a estatística requisitada ao sistema, a requisição sendo identificada como válido, então, os dados são encontrados no sistema e as estatísticas são apresentadas ao usuário.
+Na figura 5 pode-se identificar os estados como sendo a estatística requisitada ao sistema, a requisição sendo identificada como válido, então, os dados são encontrados no sistema e as estatísticas são apresentadas ao usuário.
 
 No estado identificado como \textbf{Validando requisição}, a mesma é validada, identificando se o usuário realmente possui acesso ao sistema e se os filtros que foram aplicados são também válidos, após os dados são consultados e passados para a geração de estatísticas, nos estados \textbf{Consultando dados} e \textbf{Gerando estatísticas}, respectivamente, por fim, no estado identificado como \textbf{Apresentando ao usuário} os gráficos são renderizados na tela, e o ciclo de vida da requisição termina.
 
-\section{Arquitetura das estações meteorológicas}
+\chapter{Arquitetura das estações meteorológicas}
 
 Para a construção da arquitetura da estação meteorológica, foi utilizado como central o microcontrolador arduino, diversos sensores para captura das informações e a placa WiFi NodeMCU para conexão a internet e gerenciamento das requisições com o servidor.
 
-Mais detalhes acerca dos componentes utilizados são descritos nas seçõesAmbiente de desenvolvimento integrado subsequentes.
-
-\subsection{Arduino}
+\section{Arduino}
 \label{sec:arduino}
 
 Como definido em seu site oficinal: "O Arduino é uma plataforma eletrônica de código aberto baseada em hardware e software de fácil utilização. É destinado a qualquer pessoa que construa projeto interativos." \cite{arduino_about}.
@@ -594,21 +590,40 @@ Para a construção da estação meteorológica descrita, foi utilizado arduino 
 
 Foram utilizados diversos sensores conectados as portas seriais do arduino para coleta de dados, após coletados os dados, o arduino monta a requisição que o servidor espera em formato JSON, é um formato de dados similar ao XML, porém, utiliza a sintaxe de objetos do javascript, para a construção do JSON não foi utilizada nenhuma biblioteca, por conta da quantidade de memória limitada do arduino.
 
-\subsection{Sensores}
+Na figura \ref{fig:arduino_diagram}, pode-se conferir o diagrama da estação meteorológica, demonstrando de forma resumida a ligação entre os sensores, o arduino e o nodeMCU.
+
+\begin{figure}[H]
+    \centering
+    \caption{Esboço da estação meteorológica \label{fig:arduino_diagram}}
+    \includegraphics[scale=0.8]{diagrams/arduino.png}
+    \hfill
+\legend{Fonte: Produção do autor.}
+\end{figure}
+
+Na figura \ref{fig:arduino_prototipo} pode-se visualizar o protótipo construído.
+
+\begin{figure}[H]
+    \centering
+    \caption{Protótipo da estação meteorológica \label{fig:arduino_prototipo}}
+    \includegraphics[scale=0.4]{arduino_prototipo.jpeg}
+    \hfill
+\legend{Fonte: Produção do autor.}
+\end{figure}
+
+\section{Sensores}
 \label{sec:sensores}
 
 Para a captura das informações foram utilizados os sensores de temperatura, umidade do ar com temperatura em relação a umidade, sensor de chuva digital/analógico, sensor de intensidade luminosa, radiação UV e capacidade solar.
 
 Os sensores utilizados se conectam com o arduino através de suas portas seriais, emitindo as informações nas portas seriais para que o arduino possa as capturar.
 
-Os sensores utilizados são melhor descritos nas tabelas de descrição abaixo.
+Os sensores utilizados são melhor descritos nas tabelas de descrição \ref{table:dht11} a \ref{table:sensor_uv}.
 
 \begin{center}
     \centering
     \begin{table}[H]
         \ABNTEXfontereduzida
-        \caption{Especificação do sensor de umidade e temperatura em relação a umidade}
-        \label{my-label}
+        \caption{Especificação do sensor de umidade e temperatura em relação a umidade \label{table:dht11}}
         \begin{tabularx}{\textwidth}{{l}|p{13.1cm}}
     
         \hline
@@ -809,8 +824,7 @@ Os sensores utilizados são melhor descritos nas tabelas de descrição abaixo.
     \centering
     \begin{table}[H]
         \ABNTEXfontereduzida
-        \caption{Especificações do sensor de radiação uv}
-        \label{my-label}
+        \caption{Especificações do sensor de radiação uv \label{table:sensor_uv}}
         \begin{tabularx}{\textwidth}{p{5cm}|c|c|c|c|c|c}
     
         \hline
@@ -853,7 +867,7 @@ Os sensores utilizados são melhor descritos nas tabelas de descrição abaixo.
 
 Alguns dados foram tratados antes de serem armazenados em banco de dados, detalhes acerca da transformação de dados que foi aplicada são melhor abordados na seção \ref{sec:tratamento_dados}.
 
-\subsection{NodeMCU}
+\section{NodeMCU}
 \label{sec:nodemcu}
 
 Para a conexão e envio dos dados para o servidor, foi utilizada a placa wifi NodeMCU ESP8266, conectada nas portas TX e RX.
@@ -864,7 +878,7 @@ No projeto, o arduino se conecta com o NodeMCU através das portas TX e RX, onde
 
 As configurações da placa NodeMCU são definidas no começo de seu arquivo de código fonte (linhas 3 - 12).
 
-\section{Arquitetura do software}
+\chapter{Arquitetura do software}
 \label{sec:arquitetura_software}
 
 Segundo \citeauthoronline{clean_architecture}, um dos maiores pensadores sobre o assunto da qualidade de software na modernidade, em seu livro Clean Architecture (Arquitetura limpa): "O software foi inventado para ser soft”. Pretendia ser uma maneira de alterar facilmente o comportamento das máquinas. Se quiséssemos que o comportamento das máquinas fosse difícil de mudar, teríamos chamado de hardware". \cite{clean_architecture}.
@@ -873,7 +887,7 @@ A arquitetura de software desenvolvida utiliza da separação dos componentes de
 
 Para a construção, foi utilizado clássico modelo de cliente servidor, onde a aplicação do lado cliente tem a responsabilidade de renderizar o que o cliente vê (front end) e a aplicação no lado servidor tem a responsabilidade de aplicar regras de negócio, realizar armazenamento e análise dos dados solicitados (back end), no sistema construído, o lado cliente e o lado servidor se comunicam através de protocolo HTTP, utilizando o conceito restful no lado servidor que é descrito na seção \ref{sec:servidor} e o lado cliente utiliza a tecnologia SPA (Single Page Application), que é detalhada na seção \ref{sec:cliente}
 
-\subsection{Servidor}
+\section{Servidor}
 \label{sec:servidor}
 
 O lado do servidor foi construído utilizando NodeJS, um runtime para Javascript no lado servidor, foi disponibilizada para a aplicação uma API (Application Programming Interface) via HTTP para a comunicação tanto da interface do usuário quanto para o arduino, utilizando os métodos RESTful.
@@ -881,7 +895,7 @@ Uma RESTful API é uma interface de acesso a aplicação aplicação que utiliza
 
 A documentação da api pode ser conferida na seção \ref{sec:doc_api}.
 
-\subsubsection{Banco de dados}
+\subsection{Banco de dados}
 
 O banco de dados utilizado foi o MongoDB, um banco de dados não relacional, o desenho do banco de dados é controlado pela aplicação, que define quis campos devem ser indexados e como os dados devem se "relacionar", cada informação capturada fica armazenada dentro de uma coleção, utilizando o formato JSON.
 
@@ -891,17 +905,19 @@ O banco MongoDB foi escolhido pela sua facilidade ao trabalhar com escrita de da
 
 Com todas as vantagens do banco de dados, a aplicação tira vantagem, se beneficiando no que toca performance, disponibilidade e mutabilidade das informações.
 
-\subsubsection{Tratamento dos dados meteorológicos}
+\subsection{Tratamento dos dados meteorológicos}
 \label{sec:tratamento_dados}
 
-Os dados que foram capturados pelas estações, tiveram seus valores mantidos, com exceção dos valores de intensidade de luz e quantidade de chuva, o valor de intensidade de luz precisou ser invertido para melhor visualização das informações, considerando $x$ como o valor que foi capturado, com sua máxima identificada como $1024$, a equação $1024 - x$ é aplicada, invertendo o valor, caso o resultado seja negativo, o valor $0$ é considerado em seu lugar, para a quantidade de chuva, a mesma regra foi aplicada, porém, o valor também foi convertido para \%, então a fórmula para obtenção do valor que será armazenado para quantidade de chuva será $((1024-x)/1024)100$, novamente, dado resultado negativo, será considerada a porcentagem $0$.
+Os dados que foram capturados pelas estações, tiveram seus valores mantidos, com exceção dos valores de intensidade de luz e quantidade de chuva, o valor de intensidade de luz precisou ser invertido para melhor visualização das informações.
 
-\subsubsection{Análise dos dados}
+Para a medição de intensidade de luz considerando $x$ como o valor que foi capturado, com sua máxima identificada como $1024$, a equação $1024 - x$ é aplicada, invertendo o valor, caso o resultado seja negativo, o valor $0$ é considerado em seu lugar, para a quantidade de chuva, a mesma regra foi aplicada, porém, o valor também foi convertido para \%, então a fórmula para obtenção do valor que será armazenado para quantidade de chuva será $((1024-x)/1024)100$, novamente, dado resultado negativo, será considerada a porcentagem $0$.
+
+\subsection{Análise dos dados}
 
 São retornados ao usuário os dados de médias, mínimas e máximas, por serem os valores mais significantes para o acompanhamento meteorológico na situação identificada.
 Para obtenção das médias dos valores, foi aplicada a função de agregação do MongoDB, reunindo as informações por intervalo de tempo e aplicando a função de média sobre o resultado.
 
-\subsubsection{Documentação da API}
+\subsection{Documentação da API}
 \label{sec:doc_api}
 
 Na tabela \ref{table:table_api_routes} são detalhadas as rotas da api, documentando os métodos que foram utilizados, os endereços de cada uma das rotas e sua descrição.
@@ -929,13 +945,13 @@ Na tabela \ref{table:table_api_routes} são detalhadas as rotas da api, document
     \end{tabularx}
 \end{table}
 
-Nas tabelas abaixo, podemos conferir o detalhamento de cada uma das rotas da API, para todos os casos, os dados que forem retornados da API, são encapsulados na variável data dentro do corpo de resposta da requisição HTTP, no caso de listagem de dados, a variável data é um vetor que armazena as entidades listadas e no retorno de uma única entidade, a variável data é um objeto contendo os dados que foram retornados.
+Nas tabelas \ref{table:get_arduino} a \ref{table:get_statistic}, se pode conferir o detalhamento de cada uma das rotas da API, para todos os casos, os dados que forem retornados da API, são encapsulados na variável data dentro do corpo de resposta da requisição HTTP, no caso de listagem de dados, a variável data é um vetor que armazena as entidades listadas e no retorno de uma única entidade, a variável data é um objeto contendo os dados que foram retornados.
 
 Juntamente com os dados, o campo success é retornado, quando verdadeiro, a requisição foi processada com sucesso, caso contrário, a requisição foi processada sem sucesso. Para todos os retornos, considere também os campos adicionais informados na tabela \ref{table:campos_adicionais}.
 
 \begin{table}[H]
     \centering
-    \caption{Especificações das rotas de listagem e retorno de arduino}
+    \caption{Especificações das rotas de listagem e retorno de arduino \label{table:get_arduino}}
     \begin{tabular}{c|c|c}
     \hline
     \multicolumn{3}{c}{\textbf{GET /arduino e GET /arduino/:id}} \\ \hline
@@ -1105,7 +1121,7 @@ Juntamente com os dados, o campo success é retornado, quando verdadeiro, a requ
 
 \begin{table}[H]
     \centering
-    \caption{Especificações da rota de consulta de estatísticas do arduino}
+    \caption{Especificações da rota de consulta de estatísticas do arduino \label{table:get_statistic}}
     \begin{tabular}{c|c|c}
     \hline
     \multicolumn{3}{c}{\textbf{GET /statistic/:id}} \\ \hline
@@ -1129,12 +1145,12 @@ Juntamente com os dados, o campo success é retornado, quando verdadeiro, a requ
     \end{tabular}
 \end{table}
 
-\subsection{Cliente}
+\section{Cliente}
 \label{sec:cliente}
 
 Foi utilizado para a construção da aplicação lado cliente a biblioteca REACT, ela é uma biblioteca baseada em componentes e fornece, através da linguagem javascript diversas ferramentas para a construção de SPA's (Single Page Applications) \cite{what_react}. As SPA'S (Single Page Applications) são aplicações desenvolvidas para browser, utilizando javascript, que são capazes de fornecer ao usuário uma experiência sem atualização do navegador, de forma dinâmica.
 
-\subsubsection{Descrição das telas}
+\subsection{Descrição das telas}
 
 Abaixo, pode-se conferir a documentação e descrição de cada uma das telas.
 
@@ -1146,7 +1162,7 @@ Abaixo, pode-se conferir a documentação e descrição de cada uma das telas.
 \legend{Fonte: Produção do autor.}
 \end{figure}
 
-Na tela de login, podemos conferir o formulário de acesso ao sistema, requisitando o e-mail e senha do usuário e o botão de acesso, ao ser confirmado o login no sistema o usuário é levado até a tela principal do sistema.
+Na tela de login apresentada na figura \ref{fig:screen_login}, pode-se conferir o formulário de acesso ao sistema, requisitando o e-mail e senha do usuário e o botão de acesso, ao ser confirmado o login no sistema o usuário é levado até a tela principal do sistema.
 
 \begin{figure}[H]
     \centering
@@ -1156,7 +1172,7 @@ Na tela de login, podemos conferir o formulário de acesso ao sistema, requisita
 \legend{Fonte: Produção do autor.}
 \end{figure}
 
-Conforme pode-se conferir na figura \ref{fig:screen_filtros} na tela inicial do sistema, podemos conferir os filtros de dados, onde ao se escolher as informações de opção da estação meteorológica desejada, data inicial e data final de captura e qual o intervalo de tempo e confirmar a seleção de estatísticas, os resultados da figura \ref{fig:screen_graphs1} são exibidos.
+Conforme pode-se conferir na figura \ref{fig:screen_filtros} na tela inicial do sistema, pode-se conferir os filtros de dados, onde ao se escolher as informações de opção da estação meteorológica desejada, data inicial e data final de captura e qual o intervalo de tempo e confirmar a seleção de estatísticas, os resultados das figuras \ref{fig:screen_graphs1} a \ref{fig:screen_graphs3} são exibidos.
 
 \begin{figure}[H]
     \centering
@@ -1182,17 +1198,17 @@ Conforme pode-se conferir na figura \ref{fig:screen_filtros} na tela inicial do 
 \legend{Fonte: Produção do autor.}
 \end{figure}
 
-São exibidas ao usuário as medidas de mínimas e máximas dos dados e os gráficos das médias que foram calculadas logo abaixo.
+São exibidas ao usuário as medidas de mínimas e máximas dos dados e os gráficos das médias que foram calculadas, conforme figuras \ref{fig:screen_graphs1} a \ref{fig:screen_graphs3}.
 
 \begin{figure}[H]
     \centering
-    \caption{Listagem de estações meteorológicas}
+    \caption{Listagem de estações meteorológicas \label{fig:screen_estacoes}}
     \includegraphics[scale=0.3]{telas/estacoes.png}
     \hfill
 \legend{Fonte: Produção do autor.}
 \end{figure}
 
-Na listagem de estações meteorológicas, é exibida ao usuário uma tabela com as informações das estações meteorológicas cadastradas, há no topo da tabela a opção de adicionar uma nova estação meteorológica e para cada uma das linhas da tabela são exibidas as ações de editar ou excluir o registro de uma estação meteorológica, os modais de cadastro e edição podem ser conferidos na figura \ref{fig:estacoes_add}, porém, no caso da edição, o modal já abre com as informações preenchidas.
+Na listagem de estações meteorológicas (figura \ref{fig:screen_estacoes}), é exibida ao usuário uma tabela com as informações das estações meteorológicas cadastradas, há no topo da tabela a opção de adicionar uma nova estação meteorológica e para cada uma das linhas da tabela são exibidas as ações de editar ou excluir o registro de uma estação meteorológica, os modais de cadastro e edição podem ser conferidos na figura \ref{fig:estacoes_add}, porém, no caso da edição, o modal já abre com as informações preenchidas.
 
 \begin{figure}[H]
     \centering
@@ -1204,17 +1220,17 @@ Na listagem de estações meteorológicas, é exibida ao usuário uma tabela com
 
 \begin{figure}[H]
     \centering
-    \caption{Listagem de usuários}
+    \caption{Listagem de usuários \label{fig:usuarios}}
     \includegraphics[scale=0.3]{telas/usuarios.png}
     \hfill
 \legend{Fonte: Produção do autor.}
 \end{figure}
 
-A tela de listagem de usuários, segue o mesmo comportamento da tela de listagem de estações meteorológicas, porém, para o modal de cadastro de usuário, é adicionado o campo opcional para edição de senha e e-mail.
+A tela de listagem de usuários apresentada na figura \ref{fig:usuarios}, segue o mesmo comportamento da tela de listagem de estações meteorológicas, porém, para o modal de cadastro de usuário (Figura \ref{fig:usuarios_add}), é adicionado o campo opcional para edição de senha e e-mail.
 
 \begin{figure}[H]
     \centering
-    \caption{Modal de adição ou edição de usuário}
+    \caption{Modal de adição ou edição de usuário \label{fig:usuarios_add}}
     \includegraphics[scale=0.3]{telas/usuarios_add.png}
     \hfill
 \legend{Fonte: Produção do autor.}
@@ -1222,17 +1238,17 @@ A tela de listagem de usuários, segue o mesmo comportamento da tela de listagem
 
 \begin{figure}[H]
     \centering
-    \caption{Visualização de perfil}
+    \caption{Visualização de meu perfil \label{fig:perfil}}
     \includegraphics[scale=0.3]{telas/perfil.png}
     \hfill
 \legend{Fonte: Produção do autor.}
 \end{figure}
 
-Na tela \textbf{Meu perfil} são exibidos os dados do usuário que está utilizando o sistema no momento, caso o usuário abre a função de edição, é exibido o formulário abaixo, que ao ser confirmado, é fechado novamente, exibindo somente suas informações já atualizadas.
+Na tela \textbf{Meu perfil}, conforme figura \ref{fig:perfil} são exibidos os dados do usuário que está utilizando o sistema no momento, caso o usuário abre a função de edição, é exibido o formulário conforme figura \ref{fig:perfil_edit}, que ao ser confirmado, é fechado novamente, exibindo somente suas informações já atualizadas.
 
 \begin{figure}[H]
     \centering
-    \caption{Edição de perfil}
+    \caption{Edição de perfil \label{fig:perfil_edit}}
     \includegraphics[scale=0.3]{telas/perfil_edit.png}
     \hfill
 \legend{Fonte: Produção do autor.}
@@ -1247,6 +1263,10 @@ Na tela \textbf{Meu perfil} são exibidos os dados do usuário que está utiliza
 
 \chapter{Conclusão}
 
-O sistema desenvolvido é capaz de fornecer uma ferramenta ao especialista para análise e acompanhamento de informações importantes no acompanhamento de painéis solares, atingido assim seus objetivos, porém, dadas as facilidades de mudança no software e na forma como os dados foram modelados, acrescentaria mais valor ao software, serem adicionadas novas medidas meteorológicas, enriquecendo mais a forma como o usuário é informado.
+Através da análise de dados utilizando métricas de mínima, máxima e média, foi possível visualizar mudanças climáticas que afetam a captação de energia solar, utilizando o sistema desenvolvido, o usuário pode tomar decisões acerca do posicionamento dos painéis solares, visando assim, mudanças que favorecem maior captação de energia solar através dos painéis fotovoltaicos.
+
+O sistema desenvolvido é capaz de fornecer uma ferramenta ao especialista para análise e acompanhamento de informações importantes no acompanhamento de painéis solares, atingido assim seus objetivos.
+
+Para projeto futuros, dadas as facilidades de mudança no software e na forma como os dados foram modelados, acrescentaria mais valor ao software, serem adicionadas novas medidas meteorológicas, enriquecendo mais a forma como o usuário é informado.
 
 Medições importantes como a velocidade do vento e a quantidade em milímetros de chuva não foram adicionados, e trariam grandes avanços ao projeto. Funcionalidades geográficas como identificação das estações meteorológicas através de posicionamento em mapa seriam interessantes ferramentas para a análise meteorológica proposta.

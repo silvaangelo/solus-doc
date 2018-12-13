@@ -8,19 +8,22 @@
 
 A captação de energia elétrica no Brasil, é composta por diversas fontes primárias, dentre as quais, se destacam o uso de energia eólica, energia hidráulica e energia solar, analisadas as diversas fontes de energia, dentre as tais, a energia solar se destaca por sua baixa implicação a questões ambientais.
 
-A energia solar, vem sendo cada vez mais amplamente utilizada utilizada no Brasil, tanto por empresas de pequeno a grande porte, quanto pelo mercado residencial, segundo a projeção da Associação Brasileira de Energia Solar Fotovoltaica (Absolar), tal forma de captação de energia representa 0,83\% de toda a energia captada no país \cite{maturidade_absolar}.
+A energia solar, vem sendo cada vez mais amplamente utilizada no Brasil, tanto por empresas de pequeno a grande porte, quanto pelo mercado residencial, segundo a projeção da Associação Brasileira de Energia Solar Fotovoltaica (Absolar), tal forma de captação de energia representa 0,83\% de toda a energia captada no país \cite{maturidade_absolar}.
 
 Mesmo com o amadurecimento da captação de energia solar no país, para a instalação de uma estação de captação de energia solar, é recomendado que seja feita uma prévia análise de dados no local, para que, resultados satisfatórios possam ser obtidos a mínimo prazo.
 
-O trabalho desenvolvido visa fornecer uma ferramenta para a captura e análise de dados meteorológicos, visando a geração de informações necessárias para o usuário.
+O trabalho desenvolvido visa fornecer uma ferramenta para auxiliar o monitoramento de painéis solares através da captura e análise de dados meteorológicos, visando a geração de informações necessárias para o usuário.
 
 \section{Objetivo}
+
+A eficiência energética de um painel solar está ligada diretamente a condição meteorológica atual, pois, uma vez que as condições não são satisfatórias, a eficiência tende a cair.
+Para que se possa obter melhor desempenho na captação de energia solar, as condições meteorológicas precisam ser previamente estudadas no local de instalação, pois erros de instalação e configuração podem trazer prejuízos financeiros.
 
 O trabalho tem como objetivo fornecer uma ferramenta para captura, persistência e análise de dados meteorológicos, fornecendo a usuários, informações necessárias para o acompanhamento da eficiência energética de painéis solares.
 
 Aproveitando-se do baixo custo de equipamentos eletrônicos para disponibilizar um software como um todo de baixo custo e de fácil instalação.
 
-Para se atingir o objetivo especificado, foi construído um software de amostragem de dados ao usuário, realizando previamente um tratamento e análise de dados.
+Para se atingir o objetivo especificado, foi construído um software de amostragem de dados ao usuário, realizando previamente um tratamento e análise de dados para que possam ser realizados estudos ante a instalação de painéis fotovoltaicos.
 
 \section{Justificativa}
 
@@ -36,17 +39,15 @@ O trabalho apresentado, primeiramente procura contextualizar acerca da atual sit
 
 Subseguindo, são apresentadas as metodologias utilizadas no desenvolvimento do projeto, decorrendo acerca das ferramentas utilizadas e conceitos nos quais o projeto se baseia, no desenvolvimento do trabalho, em seguida, é apresentado ao usuário o projeto do sistema, onde questões teóricas acerca da implementação são discutidas, seguindo o desenvolvimento do projeto, se apresenta a arquitetura e documentação do software, detalhando questões internas do desenvolvimento do software e as justificativas pelas tecnologias utilizadas.
 
-Por fim, são apresentadas as considerações finais do projeto, demonstrando os resultados obtidos, comparando os mesmos com os requisitos, procurando esclarecer os objetivos atingidos ou não, e então, é feita uma projeção do projeto para o futuro, apresentando um caminho para o projeto de manutenção e continuidade do software.
+Por fim, são apresentadas as considerações finais do projeto, demonstrando os resultados obtidos, comparando os mesmos com os requisitos, procurando esclarecer se os objetivos foram atingidos ou não, e então, é feita uma projeção do projeto para o futuro, apresentando um caminho para o projeto de manutenção e continuidade do software.
 
 \chapter{Metodologias}
 
 \section{Programação funcional}
 
-Foi utilizado para a elaboração da arquitetura do software, conceitos de programação funcional, sua maior característica é que, se uma expressão possui um valor bem definido, então, dada uma entrada de dados, a ordem a qual o computador carregar a avaliação não afeta o resultado \cite{introduction_functional}.
+Foi utilizado para a elaboração da arquitetura do software, conceitos de programação funcional, sua maior característica é que, se uma expressão possui um valor bem definido, dada uma entrada de um dado, a ordem a qual o computador carregar a avaliação não afeta o resultado \cite{introduction_functional}, ou seja, não importa qual a entrada, sempre teremos a mesma saída, assim, o software se torna mais previsível, aumentando também a testabilidade.
 
-A programação funcional, visa, através da utilização do conceito matemático de funções, proporcionar para a arquitetura do software, um modelo onde funções recebem parâmetros e então, através dos parâmetros que foram inseridos na função, um valor é sempre retornado para este parâmetro, este conceito é chamado de função pura, uma vez que um valor $x$ é colocado com entrada, sempre se terá como resposta o valor y. Através das funções puras, o código se torna mais previsível e mais suscetível a testes automatizados, fazendo comparação com o paradigma de programação orientada a objetos, muitas vezes, o objeto está em um estado inválido na memória, podendo assim, acarretar erros.
-
-Porém, nem sempre o controle de estado colateral é levado como lei, porém, ele é contido dentro de funções que estão encapsuladas em locais específicos da aplicação, desta forma, o risco de erros diminui, visando a alta disponibilidade do sistema, que, agora, não depende mais de uma alta quantidade de contextos externos.
+O conceito de uma função que sempre retorna o mesmo resultado dada uma entrada é chamado de conceito de função pura, outra característica de uma função pura, é que ela não deve interferir em contexto externo, dessa forma, pode-se garantir o controle de efeito colateral da aplicação, porém, ainda é necessário realizar operações de escrita em banco de dados e acesso a variáveis globais, isso é feito em funções impuras, que, uma vez identificadas, são separadas do resto da aplicação.
 
 \section{Controle de qualidade}
 
@@ -54,13 +55,13 @@ Foram utilizadas, juntamente ao desenvolvimento do software, técnicas de contro
 
 \subsection{Testes de interface}
 
-Para que fosse validada a funcionalidade do sistema como um todo, testes de interface no sistema foram aplicados, onde, diversos usuários foram submetidos a utilização do sistema, informando possíveis dificuldades na utilização do mesmo e erros, que, uma vez corrigidos, voltam a serem analisados por usuários, até que se possa ser atingida uma mínima aceitação.
+Para que fosse validada a funcionalidade do sistema como um todo, testes de interface no sistema foram aplicados, onde, foi escolhido um usuário leigo para aplicar testes no sistema, informando possíveis dificuldades na utilização e erros que são corrigidos até que se possa ser atingida uma mínima aceitação.
 
 \subsection{Testes unitários}
 
 Segundo \citeauthoronline{tdd_by_example}, (\citeyear{tdd_by_example}, p.10), "Desenvolvimento orientado a testes, é uma maneira de gerenciar o medo durante a programação".
 
-O conceito de testes unitários em desenvolvimento de software, é fornecer a uma unidade, que pode ser considerada como uma função ou uma instrução do sistema, valores esperados, valores esses, que são comparados com os retornos das funções, e que, uma vez não correspondendo, emitem um erro ao desenvolvedor, que pode, com a visualização facilitada do problema, corrigir tal ponto de forma acertiva.
+O conceito de testes unitários em desenvolvimento de software, é fornecer a uma unidade, que pode ser considerada como uma função ou uma instrução do sistema, valores esperados, valores esses, que são comparados com os retornos das funções, e que, uma vez não correspondendo, emitem um erro ao desenvolvedor, que pode, com a visualização facilitada do problema, corrigir tal ponto de forma assertiva \cite{tdd_by_example}.
 
 Tal conceito fora aplicado, para garantir, de forma unitária a qualidade e segurança do código fonte do sistema, garantindo assim, a qualidade da aplicação, desde os primeiros momentos de sua implementação.
 
@@ -90,7 +91,7 @@ O Javascript é um linguagem de programação interpretada multiparadigma, aceit
 
 Para a implementação do projeto, foi utilizada a linguagem de programação Javascript em sua versão 8, ou como definida pela especificação do Javascript, o EcmaScript 2017.
 
-A utilização da linguagem Javascript, tanto para a construção da aplicação no lado servidor, quando para o lado cliente, foi determinada por sua alta performance e por proporcionar ferramentas que permitem a programação de forma funcional, detalhes acerca da utilização da linguagem são melhor definidos na seção acerca dos detalhes da implementação do software, em \ref{sec:arquitetura_software}.
+A utilização da linguagem Javascript, tanto para a construção da aplicação no lado servidor, quando para o lado cliente, foi determinada por sua alta performance e por proporcionar ferramentas que permitem a programação de forma funcional, detalhes acerca da utilização da linguagem são melhor definidos na seção acerca dos detalhes da implementação do software, na seção acerca da arquitetura de software, na seção \ref{sec:arquitetura_software}.
 
 \section{MongoDB}
 
@@ -110,13 +111,13 @@ Neste capítulo, há a utilização da engenharia de requisitos para auxiliar a 
 
 \section{Cenários do sistema}
 
-Há diversas formas de se medir a qualidade de um software, porém, não há outra forma de se medir a qualidade e se um objetivo foi atingido no desenvolvimento de um sistema do que a satisfação dos usuários. Se entendido como os usuários desejam interagir com o sistema, o que é esperado de entradas, processamentos e saídas, será possível a equipe construir um projeto mais objetivo e proveitoso \cite{engenharia_software_pressman}. 
+Há diversas formas de se medir a qualidade de um software, porém, nenhuma delas representa melhor a qualidade do software do que a satisfação dos usuários. Se entendido como os usuários desejam interagir com o sistema, o que é esperado de entradas, processamentos e saídas, será possível a equipe construir um projeto mais objetivo e proveitoso \cite{engenharia_software_pressman}. 
 
 Portanto, nesta seção são descritos os cenários do software através de uma descrição que foi construída utilizando conteúdos das entrevistas que foram feitas com as partes interessadas no projeto.
 
 No Instituto Federal de São Paulo, no campus localizado em Boituva, o professor responsável pelo projeto descreve o sistema como uma aplicação capaz de capturar dados meteorológicos através de sensores próximos a painéis solares, ele necessita dessas informações sendo demonstradas através de gráficos, para que uma análise possa ser feita, além da disposição das informações através de gráficos, é esperado do sistema demonstrar ao usuário informações de mínimas e máximas das informações capturadas.
 
-É desejado pelo usuário que o sistema seja capaz de lidar com diversas estações meteorológicas, reunindo os dados, portando, o sistema necessita de um cadastro das estações meteorológicas, guardando informações e identificações.
+É desejado pelo usuário que o sistema seja capaz de lidar com diversas estações meteorológicas, reunindo os dados, portanto, o sistema necessita de um cadastro das estações meteorológicas, guardando informações e identificações.
 
 Através do texto acima, se podem entender as necessidades do usuário para com o sistema, o cenário de software descrito é definido dentro dos requisitos nas seções seguintes.
 
@@ -245,13 +246,13 @@ Utilizando de tabelas, este capítulo descreve de forma detalhada cada um dos ca
 
 \begin{table}[H]
     \ABNTEXfontereduzida
-    \caption{Especificação do caso de uso manter estações meteorológicas}
+    \caption{Especificação do caso de uso manter arduino}
     \label{my-label}
     \begin{tabularx}{\textwidth}{{l}|p{10.5cm}}
 
     \hline
 
-    \multicolumn{2}{c}{\textbf{Manter estações meteorológicas}} \\
+    \multicolumn{2}{c}{\textbf{Manter arduino}} \\
 
     \hline
     Descrição & Realiza uma listagem dos dados das estações meteorológicas atualmente registradas no sistema, fornecendo a possibilidade de cadastrar uma nova estação, atualizar os dados de uma estação ou excluir uma estação meteorológica do sistema \\
@@ -315,13 +316,13 @@ Na era da informação, a informação é trabalhada de forma quase instantânea
 
 No sistema desenvolvido, todo o desenvolvimento do sistema foi pensando de forma a fornecer ao usuário um baixo tempo de resposta através do uso de técnicas de desenvolvimento de software focadas em alta disponibilidade, desde a implementação da arquitetura do software e de como o banco de dados é utilizado, até a forma como os dados são carregados na interface do usuário. Para atingir tal objetivo, optou-se por disponibilizar ao usuário o mínimo de informações necessárias para a interação com o sistema.
 
-Detalhes acerca da forma como o sistema é implementado para fornecer ao usuário a melhor experiência possível desde sua implementação em baixo nível são melhor descritos na seção sobre a arquitetura do software em \ref{sec:arquitetura_software}.
+Detalhes acerca da forma como o sistema é implementado para fornecer ao usuário a melhor experiência possível desde sua implementação em baixo nível são melhor descritos na seção sobre a arquitetura do software, no capítulo \ref{sec:arquitetura_software}.
 
 \subsection{Segurança}
 
 Outro requisito muito importante para qualquer sistema é a segurança, tanto nas informações que ali estão contidas quanto no resultado final que é apresentado ao usuário, com a evolução da tecnologia, as pessoas passaram a estar muito mais próximas a sistemas de informação, colocando ali, informações sensíveis.
 
-Neste projeto, para que se pudesse proporcionar ao usuário melhor segurança em seus dados e nas informações meteorológicas que são informadas, foram utilizadas técnicas de criptografia de informações, focando primariamente em informações que são sensíveis, e, para acesso ao sistema, técnicas de bloqueio de informações através de chaves foram utilizadas, melhores detalhes acerca de como tecnologias utilizadas funcionam são relatados na seção \ref{sec:arquitetura_software}, onde a arquitetura do software proposto é apresentada.
+Neste projeto, para que se pudesse proporcionar ao usuário melhor segurança em seus dados e nas informações meteorológicas que são informadas, foram utilizadas técnicas de criptografia de informações, focando primariamente em informações que são sensíveis, e, para acesso ao sistema, técnicas de bloqueio de informações através de chaves foram utilizadas, detalhes acerca de como a segurança foi implementada são relatados na seção \ref{sec:arquitetura_software}, onde a arquitetura do software proposto é apresentada.
 
 \section{Arquitetura macro}
 
@@ -331,7 +332,7 @@ A arquitura de um software segundo \citeauthoronline{engenharia_software_sommerv
     É o elo crítico entre o projeto e a engenharia de requisitos, pois identifica os principais componentes estruturais de um sistema e os relacionamentos entre eles. O resultado do processo de projeto de arquitetura é um modelo de arquitetura que descreve como o sistema está organizado em um conjunto de componentes de comunicação. (p.104).
 \end{citacao}
 
-Procurando descrever os casos de uso do sistema, optou-se por utilizar uma descrição da arquitetura macro do software através de figuras, descrevendo o todo do sistema através de simples componentes, pode-se conferir a arquitetura através da figura \ref{fig:figure_arq_macro}
+Procurando descrever os casos de uso do sistema, optou-se por utilizar uma descrição da arquitetura macro do software através de figuras, descrevendo o sistema através de simples componentes, pode-se conferir a arquitetura através da figura \ref{fig:figure_arq_macro}
 
 \begin{center}
 \begin{figure}[H]
@@ -343,11 +344,11 @@ Procurando descrever os casos de uso do sistema, optou-se por utilizar uma descr
 \end{figure}
 \end{center}
 
-Através do desenho da arquitetura do software pode-se identificar as relações entre os diversos componentes do sistema, porém, de uma forma a qual a qual as partes interessadas no projeto ainda podem interagir e entender o que está sendo proposto.
+Através do desenho da arquitetura do software pode-se identificar as relações entre os diversos componentes do sistema, porém, de uma forma a qual as partes interessadas no projeto ainda podem interagir e entender o que está sendo proposto.
 
 No diagrama, pode-se identificar os sensores conectados diretamente com a estação meteorológica (traço preenchido), enviando as informações capturadas para a estação meteorológica através de conexão web (traço pontilhado), que, após receber as informações as envia para o sistema Web, que as persiste em banco de dados.
 
-O usuário, interage com o sistema diretamente através da interface que disponibiliza gráficos para que o acompanhamento possa ser realizando, consultando as informações através de conexão web com o sistema.
+O usuário, interage com o sistema diretamente através da interface que disponibiliza gráficos para que o acompanhamento possa ser realizando pelo usuário, a interface do usuário por sua vez, se comunica através de requisições web com o servidor.
 
 Dessa forma, pode-se descrever a arquitetura do projeto, visando, atingir o objetivo definido através da engenharia de requisitos com um projeto agora melhor detalhado, tanto para as partes interessadas, quanto para a equipe de software, nas seções seguintes, é descrita de forma técnicas os componentes do sistema, através de diagramas UML.
 
@@ -359,7 +360,7 @@ Foram utilizados para a descrição dos componentes da aplicação os diagramas 
 
 "Os diagramas de classe são usados no desenvolvimento de um modelo de sistema orientado a objetos para mostrar as classes de um sistema e as associações entre essas classes. Em poucas palavras, uma classe de objeto pode ser pensada como uma definição geral de um tipo de objeto do sistema." \cite{engenharia_software_sommerville}.
 
-O sistema desenvolvido implementa o paradigma de programação funcional de forma pouco restrita, portanto, alguns conceitos de programação orientada a objetos foram descartados. Porém, o diagrama de classes também pode representar as características das entidades do sistema.
+Como foram utilizados os conceitos de programação funcional na aplicação, não foram utilizados no sistema objetos para o encapsulamento dos comportamentos, como descreve a programação orientada a objetos, que a uml visa documentar, porém, o diagrama de classes ainda foi útil, pois, pode descrever as entidades do sistema.
 
 \begin{center}
 \begin{figure}[H]
@@ -371,7 +372,7 @@ O sistema desenvolvido implementa o paradigma de programação funcional de form
 \end{figure}
 \end{center}
 
-Como se pode verificar no diagrama descrito na figura \ref{fig:figure_diagrama_classe} as entidades do sistema consistem na medida, que é a informação que foi capturada pela estação meteorológica, que pertence a uma estação, a entidade de estação meteorológica, que possui nenhuma a muitas medidas capturadas, e a entidade de usuário, que representa um usuário cadastrado no sistema.
+Como se pode verificar no diagrama descrito na figura \ref{fig:figure_diagrama_classe} as entidades do sistema consistem na medida, que é a informação que foi capturada pela estação meteorológica, que pertence a uma estação, a entidade de estação meteorológica, que possui de nenhuma à muitas medidas capturadas, e a entidade de usuário, que representa um usuário cadastrado no sistema.
 
 As propriedades de cada entidade são especificadas nas figuras \ref{fig:spec_model_base} a \ref{fig:spec_model_user}, descartando seus comportamentos, pois, as mesmas são manipuladas através das camadas, que são descritas nas seções que descrevem o comportamento do sistema, através de diagramas de sequência e estado, nas respectivas seções \ref{sec:diagrama_sequencia} e \ref{sec:diagrama_estado}.
 
@@ -584,11 +585,11 @@ Para a construção da arquitetura da estação meteorológica, foi utilizado co
 
 Como definido em seu site oficinal: "O Arduino é uma plataforma eletrônica de código aberto baseada em hardware e software de fácil utilização. É destinado a qualquer pessoa que construa projeto interativos." \cite{arduino_about}.
 
-Ele fornece um controlador eletrônico único baseado no microprocessador ATmega328, desenvolvido em c++, componentes eletrônicos oficinais para a construção de aplicações interativas e uma IDE (Ambiente de desenvolvimento integrado) para a construção de sistemas.
+Ele fornece um controlador eletrônico único baseado no microprocessador ATmega328, desenvolvido em C++, componentes eletrônicos oficinais para a construção de aplicações interativas e uma IDE (Ambiente de desenvolvimento integrado) para a construção de sistemas.
 
 Para a construção da estação meteorológica descrita, foi utilizado arduino UNO, em sua versão contendo 6 portas analógicas, 6 portas digitais uma cpu com velocidade de 16 MHz e 32 KB de armazenamento interno.
 
-Foram utilizados diversos sensores conectados as portas seriais do arduino para coleta de dados, após coletados os dados, o arduino monta a requisição que o servidor espera em formato JSON, é um formato de dados similar ao XML, porém, utiliza a sintaxe de objetos do javascript, para a construção do JSON não foi utilizada nenhuma biblioteca, por conta da quantidade de memória limitada do arduino.
+Foram utilizados diversos sensores conectados as portas seriais do arduino para coleta de dados, após coletados os dados, o arduino monta a requisição que o servidor espera em formato JSON, o JSON é um formato de dados similar ao XML, porém, utiliza a sintaxe de objetos do javascript \cite{json_doc}, para a construção do JSON no arduino não foi utilizada nenhuma biblioteca, por conta da quantidade de memória limitada do controlador.
 
 Na figura \ref{fig:arduino_diagram}, pode-se conferir o diagrama da estação meteorológica, demonstrando de forma resumida a ligação entre os sensores, o arduino e o nodeMCU.
 
@@ -617,7 +618,23 @@ Para a captura das informações foram utilizados os sensores de temperatura, um
 
 Os sensores utilizados se conectam com o arduino através de suas portas seriais, emitindo as informações nas portas seriais para que o arduino possa as capturar.
 
-Os sensores utilizados são melhor descritos nas tabelas de descrição \ref{table:dht11} a \ref{table:sensor_uv}.
+Abaixo, pode-se conferir um exemplo do JSON que é enviado ao servidor:
+
+\pagebreak
+\begin{lstlisting}
+    {
+        "arduinoId": "5bd5182d0a39f500e611d5a5",
+        "humidity": 46.41,
+        "temperatureHumidity": 27.23,
+        "ambienceTemperature": 29.35,
+        "lightIntensity": 568.68,
+        "rainfall": 325.13,
+        "uvRay": 32.59,
+        "sunCapability": 1.35
+    }
+\end{lstlisting}
+
+Os valores que foram enviados ao servidor e os sensores utilizados são melhor descritos nas tabelas de descrição \ref{table:dht11} a \ref{table:sensor_uv}.
 
 \begin{center}
     \centering
@@ -876,14 +893,12 @@ A placa NodeMCU fornece possibilidade de conexão com rede wifi e roteamento wif
 
 No projeto, o arduino se conecta com o NodeMCU através das portas TX e RX, onde o NodeMCU espera que os dados que foram capturados pelo Arduino são escritos em sua porta serial, então, os dados são enviados através de requisição HTTP para o servidor.
 
-As configurações da placa NodeMCU são definidas no começo de seu arquivo de código fonte (linhas 3 - 12).
-
 \chapter{Arquitetura do software}
 \label{sec:arquitetura_software}
 
-Segundo \citeauthoronline{clean_architecture}, um dos maiores pensadores sobre o assunto da qualidade de software na modernidade, em seu livro Clean Architecture (Arquitetura limpa): "O software foi inventado para ser soft”. Pretendia ser uma maneira de alterar facilmente o comportamento das máquinas. Se quiséssemos que o comportamento das máquinas fosse difícil de mudar, teríamos chamado de hardware". \cite{clean_architecture}.
+Segundo \citeauthoronline{clean_architecture}, um dos maiores pensadores sobre o assunto da qualidade de software na modernidade, em seu livro Clean Architecture (Arquitetura limpa): "O software foi inventado para ser soft. Pretende ser uma maneira de alterar facilmente o comportamento das máquinas. Se quiséssemos que o comportamento das máquinas fosse difícil de mudar, teríamos chamado de hardware". \cite{clean_architecture}.
 
-A arquitetura de software desenvolvida utiliza da separação dos componentes de software em pacotes que são exportados e podem ser utilizados em qualquer parte da aplicação, separando as responsabilidades do sistema, utilizando também os benefícios de técnicas do paradigma de programação funcional, foi possível isolar os pontos de efeitos colaterais da aplicação, deixando os comportamentos da aplicação, mais previsíveis.
+A arquitetura de software desenvolvida utiliza da separação dos componentes de software em pacotes que são exportados e podem ser utilizados em qualquer parte da aplicação, separando as responsabilidades do sistema e utilizando também os benefícios de técnicas do paradigma de programação funcional, foi possível isolar os pontos de efeitos colaterais da aplicação, ou seja, os pontos do software onde dados externos são alterados, como acesso a banco de dados, acesso a variáveis globais entre outros dados.
 
 Para a construção, foi utilizado clássico modelo de cliente servidor, onde a aplicação do lado cliente tem a responsabilidade de renderizar o que o cliente vê (front end) e a aplicação no lado servidor tem a responsabilidade de aplicar regras de negócio, realizar armazenamento e análise dos dados solicitados (back end), no sistema construído, o lado cliente e o lado servidor se comunicam através de protocolo HTTP, utilizando o conceito restful no lado servidor que é descrito na seção \ref{sec:servidor} e o lado cliente utiliza a tecnologia SPA (Single Page Application), que é detalhada na seção \ref{sec:cliente}
 
@@ -891,17 +906,36 @@ Para a construção, foi utilizado clássico modelo de cliente servidor, onde a 
 \label{sec:servidor}
 
 O lado do servidor foi construído utilizando NodeJS, um runtime para Javascript no lado servidor, foi disponibilizada para a aplicação uma API (Application Programming Interface) via HTTP para a comunicação tanto da interface do usuário quanto para o arduino, utilizando os métodos RESTful.
-Uma RESTful API é uma interface de acesso a aplicação aplicação que utiliza requisições http para a criação, atualização, consulta e exclusão de dados \cite{restful_api}. No sistema desenvolvido, foi utilizado o formato de dados JSON.
+Uma RESTful API é uma interface de acesso a aplicação que utiliza requisições http para a criação, atualização, consulta e exclusão de dados \cite{restful_api}. No sistema desenvolvido, foi utilizado o formato de dados JSON.
 
 A documentação da api pode ser conferida na seção \ref{sec:doc_api}.
 
+\subsection{Segurança}
+
+A implementação da segurança do sistema foi feita através de técnica de autenticação de API utilizando JSON WEB TOKEN (JWT).
+
+É enviado através do cabeçalho da requisição HTTP um token que guarda informações de acesso ao sistema, são armazenadas todas as informações do usuário no JSON WEB TOKEN com exceção de sua senha.
+
+Segundo a RFC 7519 \cite{rfc_jwt} o JWT é uma maneira compacta e segura de transferir um objeto JSON entre duas partes, a listagem abaixo é um exemplo do token que é gerado:
+
+\begin{lstlisting}
+    {
+        "exp": 1300819478,
+        "data": {
+            "_id": "8ab5x3c89fasd645261a3",
+            "name": "John Doe",
+            "email": "john.doe@host.com"
+        }
+    }
+\end{lstlisting}
+
+Após o token ser construído, ele é assinado no servidor, ou seja, ele é criptografado através do algoritmo HS256 (HMAC 256), que utiliza uma senha para a assinatura do conteúdo \cite{hmac}, assim, o token só é decodificado pelo servidor, que é o único lugar no sistema que tem conhecimento de qual chave foi utilizada, caso ocorre um erro na decodificação do JWT, pode-se considerar o token inválido, negando então, o acesso do usuário ao sistema.
+
 \subsection{Banco de dados}
 
-O banco de dados utilizado foi o MongoDB, um banco de dados não relacional, o desenho do banco de dados é controlado pela aplicação, que define quis campos devem ser indexados e como os dados devem se "relacionar", cada informação capturada fica armazenada dentro de uma coleção, utilizando o formato JSON.
+O banco de dados utilizado foi o MongoDB, um banco de dados não relacional. O desenho do banco de dados é controlado pela aplicação, que define quais campos devem ser indexados e como os dados devem se "relacionar". Cada informação capturada fica armazenada dentro de uma coleção, utilizando o formato JSON.
 
-A escolha de um banco de dados não relacional, foi motivada pela facilidade ao se trabalhar com esquemas maleaveis, podendo ter suas informações mutadas, deixando a cargo da aplicação a tomada de decisão.
-
-O banco MongoDB foi escolhido pela sua facilidade ao trabalhar com escrita de dados concorrente, pois, as informações são, em primeiro instante processadas e armazenadas em cache, e já são retornadas para a aplicação, somente após, o MongoDB se encarrega de realizar a inserção dos dados em disco.
+A escolha de um banco de dados não relacional, foi motivada pela facilidade ao se trabalhar com esquemas de banco de dados maleáveis, assim, a estrutura do banco de dados pode ser facilmente modificada, ficando a cargo da aplicação. O banco MongoDB foi escolhido também pela sua facilidade ao trabalhar com escrita de dados concorrente, pois, as informações são, em primeiro instante processadas e armazenadas em cache, e já são retornadas para a aplicação, somente após, o MongoDB se encarrega de realizar a inserção dos dados em disco. Tais motivos, motivaram a escolha do banco de dados não convencional, pois, utilizando as técnicas descritas, ele se torna mais mutável e performática ao ser comparado com bancos de dados convencionais (relacionais).
 
 Com todas as vantagens do banco de dados, a aplicação tira vantagem, se beneficiando no que toca performance, disponibilidade e mutabilidade das informações.
 
@@ -910,7 +944,7 @@ Com todas as vantagens do banco de dados, a aplicação tira vantagem, se benefi
 
 Os dados que foram capturados pelas estações, tiveram seus valores mantidos, com exceção dos valores de intensidade de luz e quantidade de chuva, o valor de intensidade de luz precisou ser invertido para melhor visualização das informações.
 
-Para a medição de intensidade de luz considerando $x$ como o valor que foi capturado, com sua máxima identificada como $1024$, a equação $1024 - x$ é aplicada, invertendo o valor, caso o resultado seja negativo, o valor $0$ é considerado em seu lugar, para a quantidade de chuva, a mesma regra foi aplicada, porém, o valor também foi convertido para \%, então a fórmula para obtenção do valor que será armazenado para quantidade de chuva será $((1024-x)/1024)100$, novamente, dado resultado negativo, será considerada a porcentagem $0$.
+Para a medição de intensidade de luz considerando $x$ como o valor que foi capturado, com sua máxima identificada como $1024$, a equação $1024 - x$ é aplicada, invertendo o valor, caso o resultado seja negativo, o valor $0$ é considerado em seu lugar. Para a quantidade de chuva, a mesma regra foi aplicada, invertendo o valor utilizando subtração, porém, neste caso, o valor também foi convertido para \%, então a fórmula para obtenção do valor que será armazenado para quantidade de chuva será $((1024-x)/1024)100$, novamente, dado resultado negativo, será considerada a porcentagem $0$.
 
 \subsection{Análise dos dados}
 
@@ -1263,10 +1297,12 @@ Na tela \textbf{Meu perfil}, conforme figura \ref{fig:perfil} são exibidos os d
 
 \chapter{Conclusão}
 
+A captação de energia elétrica através de painéis fotovoltaicos depende diretamente das estações meteorológicas do local onde está instalada, portanto, dadas condições meteorológicas não satisfatórias, a quantidade de energia que é captada pelo painel solar tende a cair, uma estação solar precisa estar continuamente aquecida e recebendo incidência de radiação solar para que a eficiência energética seja maior.
+
 Através da análise de dados utilizando métricas de mínima, máxima e média, foi possível visualizar mudanças climáticas que afetam a captação de energia solar, utilizando o sistema desenvolvido, o usuário pode tomar decisões acerca do posicionamento dos painéis solares, visando assim, mudanças que favorecem maior captação de energia solar através dos painéis fotovoltaicos.
 
 O sistema desenvolvido é capaz de fornecer uma ferramenta ao especialista para análise e acompanhamento de informações importantes no acompanhamento de painéis solares, atingido assim seus objetivos.
 
 Para projeto futuros, dadas as facilidades de mudança no software e na forma como os dados foram modelados, acrescentaria mais valor ao software, serem adicionadas novas medidas meteorológicas, enriquecendo mais a forma como o usuário é informado.
 
-Medições importantes como a velocidade do vento e a quantidade em milímetros de chuva não foram adicionados, e trariam grandes avanços ao projeto. Funcionalidades geográficas como identificação das estações meteorológicas através de posicionamento em mapa seriam interessantes ferramentas para a análise meteorológica proposta.
+Por conta do alto custo dos sensores de velocidade do vento (anemômetro) e de quantidade de chuva em milímetros (pluviômetro), tais medidas não foram adicionadas no projeto e são medidas que trariam grandes avanços ao projeto. Funcionalidades geográficas como identificação das estações meteorológicas através de posicionamento em mapa seriam interessantes ferramentas para a análise meteorológica proposta.
